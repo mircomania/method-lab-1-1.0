@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('/fonts/Futura.woff') format('woff'), url('/fonts/Futura.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.light-text {
+    font-family: 'Futura', sans-serif;
+    font-weight: normal;
+}
+
+.bold-text {
+    font-family: 'Futura', sans-serif;
+    font-weight: bold;
+}

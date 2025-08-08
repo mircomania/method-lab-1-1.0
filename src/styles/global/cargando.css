@@ -1,0 +1,30 @@
+.cargando-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cargando-container img {
+    animation: saltar 1s ease-in-out infinite;
+    width: 280px;
+}
+
+.cargando {
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100dvh;
+    padding-top: 80px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.spinner-icon {
+    color: var(--text-color);
+    margin-top: 10px;
+}
