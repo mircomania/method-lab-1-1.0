@@ -38,7 +38,6 @@
     position: fixed;
     top: 15px;
     right: 20px;
-    font-size: 40px;
     color: var(--dark-color);
     cursor: pointer;
     z-index: 100;
@@ -74,22 +73,22 @@
     padding-bottom: 15px;
     padding-top: 15px;
     padding-right: 25px;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     user-select: none;
+    letter-spacing: 3px;
 }
 
 .container-bajo-mobile {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 42%;
 }
 
 .logo-mobile-menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    justify-content: end;
 }
 
 .logo-mobile-menu img {
@@ -157,7 +156,11 @@
     .navbar {
         justify-content: center;
         padding-top: 10px;
-        gap: 25px;
+        gap: 10px;
+    }
+
+    .logo-navbar {
+        margin-left: 0px;
     }
 
     .menu-nav {
@@ -165,10 +168,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 25px;
-        font-size: 12px;
+        gap: 11px;
+        font-size: 10px;
         user-select: none;
         margin-bottom: 40px;
+    }
+
+    .menu-nav li {
+        letter-spacing: 3px;
     }
 
     .burger-menu {
@@ -178,21 +185,22 @@
 
 @media (min-width: 1200px) {
     .navbar {
-        gap: 50px;
+        gap: 40px;
     }
 
     .menu-nav {
-        font-size: 16px;
-        gap: 50px;
+        font-size: 14px;
+        gap: 40px;
     }
 }
 
 @media (min-width: 1700px) {
     .navbar {
-        gap: 100px;
+        gap: 80px;
     }
 
     .menu-nav {
-        gap: 100px;
+        font-size: 16px;
+        gap: 80px;
     }
 }

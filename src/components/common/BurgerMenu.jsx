@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { BurgerIcon } from '../utils/BurgerIcon';
 
 import LogoBurger from '../../assets/images/logo-black.png';
 
@@ -66,7 +65,7 @@ export const BurgerMenu = () => {
         <div className="burger-menu" ref={menuRef}>
             {/* ICONO */}
 
-            <FontAwesomeIcon icon={faBars} className="burger-menu-icon" onClick={toggleMenu} data-link="burgermenu-btn" />
+            <BurgerIcon onClick={toggleMenu} className="burger-menu-icon" />
 
             {/* CONTENEDOR LISTA */}
 

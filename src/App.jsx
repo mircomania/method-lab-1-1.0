@@ -19,7 +19,7 @@ function App() {
     }, []);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="method-lab-1-1.0">
             <ScrollToTop />
 
             <Navbar />
