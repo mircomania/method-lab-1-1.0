@@ -5,10 +5,10 @@ import { BotonNav } from '../utils/BotonNav';
 export const SectionLp2 = () => {
     return (
         <section className={styles.sectionContainer}>
-            <header>
+            <header className={styles.sectionTitulo}>
                 <h2 className="light-text">
-                    En Method Lab®, sabemos que el orden libera. Ayudamos a equipos a salir del caos operativo para enfocarse en lo que realmente
-                    importa. Diseñamos flujos claros, procesos eficientes y estructuras que sí se usan.
+                    En <strong>Method Lab®</strong>, sabemos que el orden libera. Ayudamos a equipos a salir del caos operativo para enfocarse en lo
+                    que realmente importa. Diseñamos flujos claros, procesos eficientes y estructuras que sí se usan.
                 </h2>
             </header>
 

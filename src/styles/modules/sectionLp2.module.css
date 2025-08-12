@@ -1,7 +1,47 @@
 .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--white-color);
+    padding: 0 20px;
+    padding-bottom: 20px;
 }
 
-.sectionContainer h2 {
+.sectionTitulo {
+    user-select: none;
+    text-align: center;
     color: var(--dark-color);
+    line-height: 1;
+    font-size: 16px;
+    margin-bottom: 60px;
+    width: 320px;
+}
+
+@media (min-width: 576px) {
+    .sectionTitulo {
+        width: 550px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionTitulo {
+        font-size: 22px;
+        margin-bottom: 80px;
+        width: 750px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .sectionTitulo {
+        font-size: 26px;
+        width: 900px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .sectionTitulo {
+        font-size: 34px;
+        width: 1150px;
+    }
 }
