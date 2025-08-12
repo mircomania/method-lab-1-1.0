@@ -50,7 +50,7 @@
     right: 0;
     width: 235px;
     height: 100%;
-    background: var(--white-color-2);
+    background: var(--white-color);
     padding-top: 80px;
     box-shadow: -4px 0 10px var(--shadow-color);
     border-top-left-radius: 20px;

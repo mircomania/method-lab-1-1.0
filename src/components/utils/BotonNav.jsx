@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const BotonNav = ({
     to = '#registro',
     ariaLabel = 'Ir a la sección de contacto de Mejoravit',
-    className = 'boton-1 bold-text',
+    className = 'boton-1 light-text',
     title = 'Haz clic para ir a la sección de contacto',
     children = '¡Simula tu crédito ahora!',
     dataCta,

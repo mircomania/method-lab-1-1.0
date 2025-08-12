@@ -24,7 +24,7 @@ export const navLinks = [
     {
         id: 'elegir',
         to: '/elegir',
-        label: '¿POR QUÉ ELEGIR METHOD LAB?',
+        label: '¿POR QUÉ ELEGIR METHOD LAB®?',
         title: 'Por qué elegir Method Lab',
         dataLink: 'navbar-elegir-link',
     },

@@ -1,8 +1,7 @@
 .sectionContainer {
-    background-color: var(--dark-color);
-    min-height: 100dvh;
+    background-color: var(--white-color);
 }
 
 .sectionContainer h2 {
-    color: var(--white-color);
+    color: var(--dark-color);
 }

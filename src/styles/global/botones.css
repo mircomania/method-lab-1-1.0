@@ -3,36 +3,24 @@
     text-align: center;
     cursor: pointer;
     border: none;
-    background: var(--primary-color);
-    color: var(--text-color-2);
+    background: rgb(24, 29, 36);
+    color: var(--white-color);
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 20px 30px;
+    font-size: 16px;
+    transition: transform 0.5s ease;
 }
 
 .boton-1:hover {
-    background: var(--secondary-color);
+    transform: translateY(-5px);
 }
 
 .boton-1:active {
     transform: scale(0.9);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .boton-1 {
-        font-size: 22px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .boton-1 {
-        font-size: 28px;
-    }
-}
-
-@media (min-width: 1700px) {
-    .boton-1 {
-        font-size: 32px;
+        padding: 20px 80px;
     }
 }
