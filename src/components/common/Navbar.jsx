@@ -33,7 +33,7 @@ export const Navbar = () => {
                 const targetEl = document.querySelector(item.to);
                 if (targetEl) {
                     window.scrollTo({
-                        top: targetEl.offsetTop - 80,
+                        top: targetEl.offsetTop,
                         behavior: 'smooth',
                     });
                 }

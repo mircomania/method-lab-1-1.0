@@ -38,7 +38,7 @@ export const BurgerMenu = () => {
             const targetElement = document.querySelector(link.to);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop,
                     behavior: 'smooth',
                 });
             }

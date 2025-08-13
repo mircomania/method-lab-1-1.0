@@ -11,16 +11,16 @@
 .sectionTitulo {
     user-select: none;
     text-align: center;
-    color: var(--dark-color);
-    line-height: 1.1;
+    color: var(--darkblue-color);
+    line-height: 1.2;
     font-size: 16px;
     margin-bottom: 60px;
-    width: 320px;
+    width: 338px;
 }
 
 @media (min-width: 576px) {
     .sectionTitulo {
-        width: 500px;
+        width: 515px;
     }
 }
 
@@ -28,20 +28,20 @@
     .sectionTitulo {
         font-size: 20px;
         margin-bottom: 80px;
-        width: 600px;
+        width: 644px;
     }
 }
 
 @media (min-width: 1400px) {
     .sectionTitulo {
         font-size: 22px;
-        width: 700px;
+        width: 708px;
     }
 }
 
 @media (min-width: 1700px) {
     .sectionTitulo {
         font-size: 28px;
-        width: 900px;
+        width: 902px;
     }
 }
