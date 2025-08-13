@@ -1,17 +1,11 @@
 .navbar {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    background: transparent;
-    transition: box-shadow 0.5s ease;
+    background: var(--white-color);
     height: 80px;
     width: 100%;
     z-index: 99;
-}
-
-.navbar.scrolled {
-    background: var(--white-color);
-    box-shadow: -4px 0 10px var(--shadow-color);
 }
 
 .logo-container {
@@ -28,19 +22,27 @@
     pointer-events: none;
 }
 
-.menu-nav {
-    display: none;
-}
-
 /* --------------------------------- MENU HAMBURGESA*/
 
 .burger-menu-icon {
-    position: fixed;
     top: 15px;
     right: 20px;
     color: var(--dark-color);
     cursor: pointer;
     z-index: 100;
+    transition: top 0.25s ease, right 0.25s ease, transform 0.25s ease;
+}
+
+.burger-menu-icon.absolute {
+    position: absolute;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.burger-menu-icon.fixed {
+    position: fixed;
+    opacity: 0.95;
+    transform: translateY(2px);
 }
 
 .mobile-nav-menu {
@@ -209,10 +211,6 @@
 
     .menu-nav li a:hover::after {
         transform: scaleX(1);
-    }
-
-    .burger-menu {
-        display: none;
     }
 }
 

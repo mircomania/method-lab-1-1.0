@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import LogoNavbar from '../../assets/images/logo-figuras-black.png';
 
+import { useMediaQuery } from '../../hooks/UseMediaQuery';
 import { BurgerMenu } from './BurgerMenu';
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -10,7 +11,7 @@ export const Navbar = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [activeLink, setActiveLink] = useState(navLinks[0].id);
-    const [isScrolled, setIsScrolled] = useState(false);
+    const isMobile = useMediaQuery('(max-width: 767px)');
 
     const handleLinkClick = (e, item) => {
         e.preventDefault();
@@ -56,19 +57,9 @@ export const Navbar = () => {
         }
     };
 
-    // Detectar scroll
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <header>
-            <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} aria-label="Barra de navegación principal">
+            <nav className="navbar" aria-label="Barra de navegación principal">
                 {/* LOGO */}
 
                 <div className="logo-container">
@@ -79,38 +70,62 @@ export const Navbar = () => {
 
                 {/* LISTA  */}
 
-                <ul className="menu-nav light-text">
-                    {navLinks.map((item) => (
-                        <li key={item.id}>
-                            {item.to.startsWith('#') || item.to === '/' ? (
-                                <a
-                                    href={item.to}
-                                    onClick={(e) => handleLinkClick(e, item)}
-                                    className={activeLink === item.id ? 'active' : ''}
-                                    title={item.title}
-                                    data-link={item.dataLink}
-                                >
-                                    {item.label}
-                                </a>
-                            ) : (
-                                <NavLink
-                                    to={item.to}
-                                    title={item.title}
-                                    className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
-                                    onClick={() => setActiveLink(item.id)}
-                                    data-link={item.dataLink}
-                                >
-                                    {item.label}
-                                </NavLink>
-                            )}
-                        </li>
-                    ))}
-                </ul>
+                {!isMobile && (
+                    <ul className="menu-nav light-text">
+                        {navLinks.map((item) => (
+                            <li key={item.id}>
+                                {item.to.startsWith('#') || item.to === '/' ? (
+                                    <a
+                                        href={item.to}
+                                        onClick={(e) => handleLinkClick(e, item)}
+                                        className={activeLink === item.id ? 'active' : ''}
+                                        title={item.title}
+                                        data-link={item.dataLink}
+                                    >
+                                        {item.label.includes('®') ? (
+                                            <>
+                                                {item.label.split('®').map((part, index) => (
+                                                    <React.Fragment key={index}>
+                                                        {part}
+                                                        {index === 0 && <span className="registered">®</span>}
+                                                    </React.Fragment>
+                                                ))}
+                                            </>
+                                        ) : (
+                                            item.label
+                                        )}
+                                    </a>
+                                ) : (
+                                    <NavLink
+                                        to={item.to}
+                                        title={item.title}
+                                        className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
+                                        onClick={() => setActiveLink(item.id)}
+                                        data-link={item.dataLink}
+                                    >
+                                        {item.label.includes('®') ? (
+                                            <>
+                                                {item.label.split('®').map((part, index) => (
+                                                    <React.Fragment key={index}>
+                                                        {part}
+                                                        {index === 0 && <span className="registered">®</span>}
+                                                    </React.Fragment>
+                                                ))}
+                                            </>
+                                        ) : (
+                                            item.label
+                                        )}
+                                    </NavLink>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </nav>
 
             {/* BURGERMENU */}
 
-            <BurgerMenu />
+            {isMobile && <BurgerMenu />}
         </header>
     );
 };

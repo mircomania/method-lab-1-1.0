@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { BurgerIcon } from '../utils/BurgerIcon';
@@ -9,6 +9,7 @@ import { navLinks } from '../utils/NavBarMenu';
 
 export const BurgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
     const menuRef = useRef(null);
@@ -61,11 +62,22 @@ export const BurgerMenu = () => {
         toggleMenu();
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(isOpen && window.scrollY > 0.1);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isOpen]);
+
     return (
         <div className="burger-menu" ref={menuRef}>
             {/* ICONO */}
 
-            <BurgerIcon onClick={toggleMenu} className="burger-menu-icon" />
+            <BurgerIcon onClick={toggleMenu} className={`burger-menu-icon ${isScrolled && isOpen ? 'fixed' : 'absolute'}`} aria-label="Abrir menú" />
 
             {/* CONTENEDOR LISTA */}
 
@@ -80,19 +92,52 @@ export const BurgerMenu = () => {
                                     if (link.id === 'inicio') {
                                         return (
                                             <a href="/" onClick={handleInicioClick} title={link.title}>
-                                                {link.label}
+                                                {link.label.includes('®') ? (
+                                                    <>
+                                                        {link.label.split('®').map((part, index) => (
+                                                            <React.Fragment key={index}>
+                                                                {part}
+                                                                {index === 0 && <span className="registered">®</span>}
+                                                            </React.Fragment>
+                                                        ))}
+                                                    </>
+                                                ) : (
+                                                    link.label
+                                                )}
                                             </a>
                                         );
                                     } else if (link.to.startsWith('#')) {
                                         return (
                                             <a href={link.to} onClick={(e) => handleLinkClick(e, link)} title={link.title}>
-                                                {link.label}
+                                                {link.label.includes('®') ? (
+                                                    <>
+                                                        {link.label.split('®').map((part, index) => (
+                                                            <React.Fragment key={index}>
+                                                                {part}
+                                                                {index === 0 && <span className="registered">®</span>}
+                                                            </React.Fragment>
+                                                        ))}
+                                                    </>
+                                                ) : (
+                                                    link.label
+                                                )}
                                             </a>
                                         );
                                     } else {
                                         return (
                                             <NavLink to={link.to} onClick={toggleMenu} title={link.title} data-link={link.dataLink}>
-                                                {link.label}
+                                                {link.label.includes('®') ? (
+                                                    <>
+                                                        {link.label.split('®').map((part, index) => (
+                                                            <React.Fragment key={index}>
+                                                                {part}
+                                                                {index === 0 && <span className="registered">®</span>}
+                                                            </React.Fragment>
+                                                        ))}
+                                                    </>
+                                                ) : (
+                                                    link.label
+                                                )}
                                             </NavLink>
                                         );
                                     }

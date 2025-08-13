@@ -12,7 +12,7 @@
     user-select: none;
     text-align: center;
     color: var(--dark-color);
-    line-height: 1;
+    line-height: 1.1;
     font-size: 16px;
     margin-bottom: 60px;
     width: 320px;
@@ -20,28 +20,28 @@
 
 @media (min-width: 576px) {
     .sectionTitulo {
-        width: 550px;
+        width: 500px;
     }
 }
 
 @media (min-width: 1200px) {
     .sectionTitulo {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 80px;
-        width: 750px;
+        width: 600px;
     }
 }
 
 @media (min-width: 1400px) {
     .sectionTitulo {
-        font-size: 26px;
+        font-size: 22px;
+        width: 700px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sectionTitulo {
+        font-size: 28px;
         width: 900px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .sectionTitulo {
-        font-size: 34px;
-        width: 1150px;
     }
 }

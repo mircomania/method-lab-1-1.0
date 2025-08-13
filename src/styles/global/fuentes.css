@@ -5,12 +5,25 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Futura';
+    src: url('/fonts/subset-Futura-Bold.woff2') format('woff2'), url('/fonts/subset-Futura-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 .light-text {
-    font-family: 'Futura', sans-serif;
-    font-weight: normal;
+    font-family: 'Futura-Medium', sans-serif;
+    font-weight: 400;
 }
 
 .bold-text {
     font-family: 'Futura', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.registered {
+    font-size: 0.6em;
+    vertical-align: super;
 }
