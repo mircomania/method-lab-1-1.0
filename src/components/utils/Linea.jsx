@@ -21,6 +21,7 @@ export const Linea = ({
     // MANEJO DE RESPONSIVE (TOP, BOTTOM, LEFT, RIGHT, LINEHEIGHT)
     // para utilizar valores responsivos agregar ej: "top={{ default: 20, 1200: 20, 1700: 20 }}", "lineHeight={{ default: 2, 1200: 4 , 1700: 6 }}"
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
     useEffect(() => {
         const handleResize = () => setScreenWidth(window.innerWidth);
@@ -47,38 +48,58 @@ export const Linea = ({
     const dynamicLeft = getResponsiveValue(left);
     const dynamicRight = getResponsiveValue(right);
     const dynamicLineHeight = getResponsiveValue(lineHeight);
+    const dynamicMaxWidth = getResponsiveValue(maxWidth);
+    const dynamicStart = getResponsiveValue(start);
+    const dynamicEnd = getResponsiveValue(end);
 
     // CÁLCULO DEL PROGRESO DE LA LÍNEA
     const [progressValue, setProgressValue] = useState(0);
 
     useEffect(() => {
+        if (!sectionRef.current) return;
+        const rect = sectionRef.current.getBoundingClientRect();
+        setDimensions({ width: rect.width, height: rect.height });
+    }, [sectionRef, screenWidth]);
+
+    useEffect(() => {
         const handleScroll = () => {
             if (!sectionRef.current) return;
-
             const rect = sectionRef.current.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
+            setDimensions({ width: rect.width, height: rect.height });
 
-            const visibleHeight = windowHeight - Math.max(rect.top, 0);
+            const sectionTop = rect.top + window.scrollY;
             const sectionHeight = rect.height;
+            const scrollY = window.scrollY + window.innerHeight;
 
-            let progress = visibleHeight / sectionHeight;
+            let progress = (scrollY - sectionTop) / sectionHeight;
 
-            if (progress < start) setProgressValue(0);
-            else if (progress >= end) setProgressValue(maxWidth);
+            if (progress < dynamicStart) setProgressValue(0);
+            else if (progress >= dynamicEnd) setProgressValue(dynamicMaxWidth);
             else {
-                const scaledProgress = ((progress - start) / (end - start)) * maxWidth;
-                setProgressValue(Math.min(maxWidth, Math.max(0, scaledProgress)));
+                const scaledProgress = ((progress - dynamicStart) / (dynamicEnd - dynamicStart)) * dynamicMaxWidth;
+                setProgressValue(Math.min(dynamicMaxWidth, Math.max(0, scaledProgress)));
             }
         };
 
         window.addEventListener('scroll', handleScroll);
+        handleScroll(); // ← Ejecuta en montaje
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [sectionRef, maxWidth, start, end]);
+    }, [sectionRef, dynamicMaxWidth, dynamicStart, dynamicEnd]);
 
     // ESTILOS DE LA LÍNEA
     const style = {
-        width: linea === 'hor' ? `${progressValue}%` : typeof dynamicLineHeight === 'number' ? `${dynamicLineHeight}px` : dynamicLineHeight,
-        height: linea === 'ver' ? `${progressValue}%` : typeof dynamicLineHeight === 'number' ? `${dynamicLineHeight}px` : dynamicLineHeight,
+        width:
+            linea === 'hor'
+                ? `${(progressValue / 100) * dimensions.width}px`
+                : typeof dynamicLineHeight === 'number'
+                ? `${dynamicLineHeight}px`
+                : dynamicLineHeight,
+        height:
+            linea === 'ver'
+                ? `${(progressValue / 100) * dimensions.height}px`
+                : typeof dynamicLineHeight === 'number'
+                ? `${dynamicLineHeight}px`
+                : dynamicLineHeight,
         backgroundColor: lineColor,
         position: 'absolute',
         zIndex: 1,
@@ -94,10 +115,10 @@ export const Linea = ({
 
 Linea.propTypes = {
     sectionRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
-    maxWidth: PropTypes.number.isRequired,
+    maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.object]).isRequired,
     className: PropTypes.string,
-    start: PropTypes.number,
-    end: PropTypes.number,
+    start: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    end: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     lineHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
     lineColor: PropTypes.string,
     top: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),

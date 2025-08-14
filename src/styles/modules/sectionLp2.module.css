@@ -15,33 +15,40 @@
     line-height: 1.2;
     font-size: 16px;
     margin-bottom: 60px;
-    width: 338px;
+    width: 350px;
 }
 
-@media (min-width: 576px) {
-    .sectionTitulo {
-        width: 515px;
-    }
+.sectionTitulo h2 {
+    font-size: 16px;
 }
 
 @media (min-width: 1200px) {
     .sectionTitulo {
-        font-size: 20px;
         margin-bottom: 80px;
-        width: 644px;
+        width: 450px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 20px;
     }
 }
 
 @media (min-width: 1400px) {
     .sectionTitulo {
+        width: 500px;
+    }
+
+    .sectionTitulo h2 {
         font-size: 22px;
-        width: 708px;
     }
 }
 
 @media (min-width: 1700px) {
     .sectionTitulo {
+        width: 650px;
+    }
+
+    .sectionTitulo h2 {
         font-size: 28px;
-        width: 902px;
     }
 }

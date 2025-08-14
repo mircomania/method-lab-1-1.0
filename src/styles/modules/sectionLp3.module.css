@@ -1,8 +1,11 @@
 .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     background-color: var(--dark-color);
-    min-height: 100dvh;
     padding: 0 20px;
 }
 
@@ -12,5 +15,116 @@
     user-select: none;
     color: var(--white-color);
     margin-top: 40px;
+    width: 320px;
+}
+
+.sectionTitulo h2 {
+    font-size: 28px;
+}
+
+.sectionContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 20px 0;
+    gap: 10px 20px;
+    width: 320px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background: var(--white-color);
+    color: var(--darkblue-color);
+    padding: 50px 20px;
+    width: 320px;
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.card span {
     font-size: 18px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    .sectionTitulo {
+        width: 645px;
+    }
+
+    .sectionCards {
+        margin: 20px 0;
+        gap: 20px 5px;
+        width: 645px;
+    }
+
+    .card {
+        padding: 50px 28px;
+        width: 320px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionTitulo {
+        margin-top: 80px;
+        width: 970px;
+    }
+
+    .sectionCards {
+        margin-bottom: 40px;
+        gap: 30px 5px;
+        width: 970px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .sectionTitulo {
+        width: 1200px;
+    }
+
+    .sectionCards {
+        gap: 40px 5px;
+        width: 1210px;
+    }
+
+    .card {
+        padding: 50px 60px;
+        width: 400px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sectionTitulo {
+        width: 1360px;
+    }
+
+    .sectionCards {
+        gap: 40px 5px;
+        width: 1360px;
+    }
+
+    .card {
+        padding: 60px 85px;
+        width: 450px;
+    }
 }
