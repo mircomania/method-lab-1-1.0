@@ -2,7 +2,7 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    background: var(--white-color);
+    background: transparent;
     height: 80px;
     width: 100%;
     z-index: 99;
