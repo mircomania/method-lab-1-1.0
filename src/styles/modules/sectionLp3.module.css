@@ -34,7 +34,8 @@
     flex-wrap: wrap;
     justify-content: start;
     margin: 20px 0;
-    gap: 10px 20px;
+    margin-bottom: 40px;
+    gap: 10px 10px;
     width: 320px;
 }
 
@@ -73,8 +74,7 @@
     }
 
     .sectionCards {
-        margin: 20px 0;
-        gap: 20px 5px;
+        gap: 5px 5px;
         width: 645px;
     }
 
@@ -91,8 +91,8 @@
     }
 
     .sectionCards {
-        margin-bottom: 40px;
-        gap: 30px 5px;
+        margin-bottom: 80px;
+        gap: 5px 5px;
         width: 970px;
     }
 }
@@ -103,7 +103,7 @@
     }
 
     .sectionCards {
-        gap: 40px 5px;
+        gap: 5px 5px;
         width: 1210px;
     }
 
@@ -119,7 +119,7 @@
     }
 
     .sectionCards {
-        gap: 40px 5px;
+        gap: 5px 5px;
         width: 1360px;
     }
 

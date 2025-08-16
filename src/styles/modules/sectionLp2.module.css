@@ -5,7 +5,7 @@
     justify-content: center;
     background-color: var(--white-color);
     padding: 0 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .sectionTitulo {
@@ -13,8 +13,7 @@
     text-align: center;
     color: var(--darkblue-color);
     line-height: 1.2;
-    font-size: 16px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     width: 350px;
 }
 
@@ -22,18 +21,20 @@
     font-size: 16px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
     .sectionTitulo {
-        margin-bottom: 80px;
-        width: 450px;
+        width: 400px;
     }
 
     .sectionTitulo h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
+    .sectionContainer {
+        padding-bottom: 80px;
+    }
     .sectionTitulo {
         width: 500px;
     }
@@ -43,12 +44,22 @@
     }
 }
 
+@media (min-width: 1400px) {
+    .sectionTitulo {
+        width: 550px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 24px;
+    }
+}
+
 @media (min-width: 1700px) {
     .sectionTitulo {
         width: 650px;
     }
 
     .sectionTitulo h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 }
