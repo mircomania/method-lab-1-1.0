@@ -1,0 +1,6 @@
+.sectionContainer {
+    background: var(--white-color);
+    min-height: 100dvh;
+    position: relative;
+    overflow: hidden;
+}
