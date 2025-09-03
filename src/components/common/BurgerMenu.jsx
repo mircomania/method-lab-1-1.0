@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { BurgerIcon } from '../utils/BurgerIcon';
@@ -92,52 +92,19 @@ export const BurgerMenu = () => {
                                     if (link.id === 'inicio') {
                                         return (
                                             <a href="/" onClick={handleInicioClick} title={link.title}>
-                                                {link.label.includes('®') ? (
-                                                    <>
-                                                        {link.label.split('®').map((part, index) => (
-                                                            <React.Fragment key={index}>
-                                                                {part}
-                                                                {index === 0 && <span className="registered">®</span>}
-                                                            </React.Fragment>
-                                                        ))}
-                                                    </>
-                                                ) : (
-                                                    link.label
-                                                )}
+                                                {link.label}
                                             </a>
                                         );
                                     } else if (link.to.startsWith('#')) {
                                         return (
                                             <a href={link.to} onClick={(e) => handleLinkClick(e, link)} title={link.title}>
-                                                {link.label.includes('®') ? (
-                                                    <>
-                                                        {link.label.split('®').map((part, index) => (
-                                                            <React.Fragment key={index}>
-                                                                {part}
-                                                                {index === 0 && <span className="registered">®</span>}
-                                                            </React.Fragment>
-                                                        ))}
-                                                    </>
-                                                ) : (
-                                                    link.label
-                                                )}
+                                                {link.label}
                                             </a>
                                         );
                                     } else {
                                         return (
                                             <NavLink to={link.to} onClick={toggleMenu} title={link.title} data-link={link.dataLink}>
-                                                {link.label.includes('®') ? (
-                                                    <>
-                                                        {link.label.split('®').map((part, index) => (
-                                                            <React.Fragment key={index}>
-                                                                {part}
-                                                                {index === 0 && <span className="registered">®</span>}
-                                                            </React.Fragment>
-                                                        ))}
-                                                    </>
-                                                ) : (
-                                                    link.label
-                                                )}
+                                                {link.label}
                                             </NavLink>
                                         );
                                     }

@@ -6,9 +6,7 @@
     position: relative;
     overflow: hidden;
     background-color: var(--darkblue-color);
-    min-height: 100vh;
-    padding: 0 20px;
-    padding-bottom: 50px;
+    padding: 170px 20px;
 }
 
 .sectionTitulo {
@@ -76,7 +74,7 @@
 
 @media (min-width: 992px) {
     .sectionContainer {
-        padding-bottom: 70px;
+        padding: 140px 20px;
     }
 
     .sectionTitulo {
@@ -97,6 +95,10 @@
 }
 
 @media (min-width: 1400px) {
+    .sectionContainer {
+        padding: 180px 20px;
+    }
+
     .sectionTitulo h2 {
         font-size: 30px;
     }
@@ -111,6 +113,10 @@
 }
 
 @media (min-width: 1700px) {
+    .sectionContainer {
+        padding: 200px 20px;
+    }
+
     .sectionTitulo h2 {
         font-size: 38px;
     }

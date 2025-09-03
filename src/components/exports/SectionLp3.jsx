@@ -12,8 +12,8 @@ export const SectionLp3 = () => {
                 <h3 className="bold-text">
                     Realizamos un <span className={styles.palabra1}>diagnóstico</span> de tu empresa,{' '}
                     <span className={styles.palabra2}>implementamos</span> flujos y tableros en{' '}
-                    <img src={logoMonday} alt="monday.com" className={styles.inlineLogo} /> y acompañamos a tu equipo con{' '}
-                    <span className={styles.palabra3}>capacitación</span> continua.
+                    <img src={logoMonday} alt="monday.com" className={styles.inlineLogo} loading="lazy" decoding="async" /> y acompañamos a tu equipo
+                    con <span className={styles.palabra3}>capacitación</span> continua.
                 </h3>
             </div>
         </section>

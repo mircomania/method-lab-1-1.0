@@ -10,8 +10,12 @@ export const navLinks = [
     {
         id: 'metodologia',
         to: '#metodologia',
-        label: 'METHODOLOGÍA',
-        title: 'Que metodología seguimos en Method Lab',
+        label: (
+            <>
+                <strong>METHOD</strong>OLOGÍA
+            </>
+        ),
+        title: 'Qué metodología seguimos en Method Lab',
         dataLink: 'navbar-metodologia-link',
     },
     {

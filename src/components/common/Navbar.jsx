@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import LogoNavbar from '../../assets/images/logo-figuras-black.png';
@@ -82,18 +82,7 @@ export const Navbar = () => {
                                         title={item.title}
                                         data-link={item.dataLink}
                                     >
-                                        {item.label.includes('®') ? (
-                                            <>
-                                                {item.label.split('®').map((part, index) => (
-                                                    <React.Fragment key={index}>
-                                                        {part}
-                                                        {index === 0 && <span className="registered">®</span>}
-                                                    </React.Fragment>
-                                                ))}
-                                            </>
-                                        ) : (
-                                            item.label
-                                        )}
+                                        {item.label}
                                     </a>
                                 ) : (
                                     <NavLink
@@ -103,18 +92,7 @@ export const Navbar = () => {
                                         onClick={() => setActiveLink(item.id)}
                                         data-link={item.dataLink}
                                     >
-                                        {item.label.includes('®') ? (
-                                            <>
-                                                {item.label.split('®').map((part, index) => (
-                                                    <React.Fragment key={index}>
-                                                        {part}
-                                                        {index === 0 && <span className="registered">®</span>}
-                                                    </React.Fragment>
-                                                ))}
-                                            </>
-                                        ) : (
-                                            item.label
-                                        )}
+                                        {item.label}
                                     </NavLink>
                                 )}
                             </li>
