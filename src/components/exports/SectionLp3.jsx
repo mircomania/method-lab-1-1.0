@@ -1,27 +1,20 @@
 import styles from '../../styles/modules/sectionLp3.module.css';
-import { catsSectionLp3 } from '../utils/catsSectionLp3';
+import logoMonday from '../../assets/images/logo-monday-blanco.png';
 
 export const SectionLp3 = () => {
     return (
         <section className={styles.sectionContainer}>
             <header className={styles.sectionTitulo}>
-                <h2 className="light-text">Nuestros Servicios.</h2>
+                <h2 className="light-text">Servicios.</h2>
             </header>
 
             <div className={styles.sectionContenido}>
-                <div className={styles.sectionCards}>
-                    {catsSectionLp3.map((item) => (
-                        <div key={item.id} className={styles.card}>
-                            <img src={item.icono} alt={item.titulo} />
-
-                            <span className="bold-text">{item.id}</span>
-
-                            <h3 className="bold-text">{item.titulo}</h3>
-
-                            <p className="light-text">{item.texto}</p>
-                        </div>
-                    ))}
-                </div>
+                <h3 className="bold-text">
+                    Realizamos un <span className={styles.palabra1}>diagnóstico</span> de tu empresa,{' '}
+                    <span className={styles.palabra2}>implementamos</span> flujos y tableros en{' '}
+                    <img src={logoMonday} alt="monday.com" className={styles.inlineLogo} /> y acompañamos a tu equipo con{' '}
+                    <span className={styles.palabra3}>capacitación</span> continua.
+                </h3>
             </div>
         </section>
     );

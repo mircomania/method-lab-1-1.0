@@ -11,7 +11,7 @@ export const Navbar = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [activeLink, setActiveLink] = useState(navLinks[0].id);
-    const isMobile = useMediaQuery('(max-width: 767px)');
+    const isMobile = useMediaQuery('(max-width: 991px)');
 
     const handleLinkClick = (e, item) => {
         e.preventDefault();

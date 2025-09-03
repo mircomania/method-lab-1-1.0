@@ -11,8 +11,8 @@ export const SectionLp2 = () => {
                     <strong>
                         Method Lab<span className="registered">®</span>
                     </strong>
-                    , sabemos que el orden libera. Ayudamos a equipos a salir del caos operativo para enfocarse en lo que realmente importa. Diseñamos
-                    flujos claros, procesos eficientes y estructuras que sí se usan.
+                    ayudamos a líderes y equipos a trabajar con claridad. Diagnosticamos tu operación, diseñamos procesos eficientes y los
+                    implementamos en herramientas digitales fáciles de usar. Así, tu negocio gana orden, productividad y control real.
                 </h2>
             </header>
 

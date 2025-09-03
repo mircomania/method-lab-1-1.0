@@ -100,37 +100,12 @@
     pointer-events: none;
 }
 
-.link-container:nth-child(1):hover {
-    background: linear-gradient(95deg, rgba(255, 255, 255, 0), var(--yellow-color) 100%);
-}
-
-.link-container:nth-child(2):hover {
-    background: linear-gradient(95deg, rgba(255, 255, 255, 0), var(--orange-color) 100%);
-}
-
-.link-container:nth-child(3):hover {
-    background: linear-gradient(95deg, rgba(255, 255, 255, 0), var(--gren-color) 100%);
-}
-
-.link-container:nth-child(4):hover {
-    background: linear-gradient(95deg, rgba(255, 255, 255, 0), var(--blue-color) 100%);
-}
-
-.link-container:nth-child(5):hover {
-    background: linear-gradient(95deg, rgba(255, 255, 255, 0), var(--purple-color) 100%);
-}
-
 /* --------- ESTILOS PARA LINKS*/
 
 .menu-nav li a,
 .burger-menu-nav li a {
     text-decoration: none;
     color: var(--darkblue-color);
-}
-
-.menu-nav li a.active,
-.burger-menu-nav li a.active {
-    color: var(--primary-color);
 }
 
 @media (min-width: 576px) {
@@ -145,6 +120,10 @@
         right: 25px;
     }
 
+    .mobile-nav-menu {
+        width: 300px;
+    }
+
     .mobile-nav-menu li {
         padding-right: 25px;
     }
@@ -154,11 +133,11 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .navbar {
         justify-content: center;
         padding-top: 10px;
-        gap: 10px;
+        gap: 20px;
     }
 
     .logo-navbar {
@@ -170,7 +149,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 11px;
+        gap: 20px;
         font-size: 10px;
         user-select: none;
         margin-bottom: 40px;
@@ -216,22 +195,22 @@
 
 @media (min-width: 1200px) {
     .navbar {
-        gap: 40px;
+        gap: 30px;
     }
 
     .menu-nav {
         font-size: 14px;
-        gap: 40px;
+        gap: 30px;
     }
 }
 
 @media (min-width: 1700px) {
     .navbar {
-        gap: 80px;
+        gap: 60px;
     }
 
     .menu-nav {
         font-size: 16px;
-        gap: 80px;
+        gap: 60px;
     }
 }

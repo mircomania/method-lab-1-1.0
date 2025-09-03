@@ -14,7 +14,7 @@
     color: var(--darkblue-color);
     line-height: 1.2;
     margin-bottom: 30px;
-    width: 350px;
+    width: 357px;
 }
 
 .sectionTitulo h2 {
@@ -23,7 +23,7 @@
 
 @media (min-width: 576px) {
     .sectionTitulo {
-        width: 400px;
+        width: 401px;
     }
 
     .sectionTitulo h2 {
@@ -36,7 +36,7 @@
         padding-bottom: 80px;
     }
     .sectionTitulo {
-        width: 500px;
+        width: 489px;
     }
 
     .sectionTitulo h2 {
@@ -46,7 +46,7 @@
 
 @media (min-width: 1400px) {
     .sectionTitulo {
-        width: 550px;
+        width: 527px;
     }
 
     .sectionTitulo h2 {
@@ -56,7 +56,7 @@
 
 @media (min-width: 1700px) {
     .sectionTitulo {
-        width: 650px;
+        width: 658px;
     }
 
     .sectionTitulo h2 {

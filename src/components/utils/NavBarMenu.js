@@ -10,7 +10,7 @@ export const navLinks = [
     {
         id: 'metodologia',
         to: '#metodologia',
-        label: 'METODOLOGÍA',
+        label: 'METHODOLOGÍA',
         title: 'Que metodología seguimos en Method Lab',
         dataLink: 'navbar-metodologia-link',
     },
@@ -22,10 +22,17 @@ export const navLinks = [
         dataLink: 'navbar-monday-link',
     },
     {
-        id: 'elegir',
-        to: '/elegir',
-        label: '¿POR QUÉ ELEGIR METHOD LAB®?',
+        id: 'nosotros',
+        to: '/nosotros',
+        label: 'SOBRE NOSOTROS',
         title: 'Por qué elegir Method Lab',
-        dataLink: 'navbar-elegir-link',
+        dataLink: 'navbar-nosotros-link',
+    },
+    {
+        id: 'contacto',
+        to: '/contacto',
+        label: 'DISEÑEMOS TU MÉTODO',
+        title: 'Contacta con Method Lab',
+        dataLink: 'navbar-contacto-link',
     },
 ];
