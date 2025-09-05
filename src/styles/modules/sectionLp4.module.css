@@ -1,6 +1,114 @@
 .sectionContainer {
-    background: var(--white-color);
-    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
+    background: var(--white-color);
+    padding: 40px 0;
+}
+
+.sectionContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+}
+
+.titulosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+    z-index: 2;
+    color: var(--darkblue-color);
+}
+
+.sectionTitulo h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.listaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+}
+
+.listaItem {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    width: 346px;
+    gap: 5px;
+}
+
+.listaItem span {
+    font-size: 16px;
+}
+
+.listaItem h3 {
+    font-size: 16px;
+}
+
+.listaItem p {
+    font-size: 16px;
+}
+
+.listaContainer hr {
+    background-color: var(--darkblue-color);
+    width: 91%;
+    border: none;
+    border-radius: 10px;
+    height: 2px;
+    opacity: 0.5;
+    margin: 10px 0;
+}
+
+.inlineLogo {
+    height: 1em;
+    vertical-align: middle;
+    margin: 0 0.25em;
+}
+
+.plusContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--yellow-color);
+    box-shadow: -4px 0 10px var(--shadow-color);
+    filter: drop-shadow(0px 0px 30px var(--text-color));
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    rotate: -25deg;
+    left: -10px;
+}
+
+.plusContainer p {
+    color: var(--darkblue-color);
+    font-size: 12px;
+}
+
+.iconosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    width: 360px;
+    margin-left: 160px;
+}
+
+.iconosContainer img {
+    width: 161.4px;
 }
