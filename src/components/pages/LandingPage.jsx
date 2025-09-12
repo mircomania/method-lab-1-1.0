@@ -5,6 +5,10 @@ import { SectionLp1 } from '../exports/SectionLp1';
 import { SectionLp2 } from '../exports/SectionLp2';
 import { SectionLp3 } from '../exports/SectionLp3';
 import { SectionLp4 } from '../exports/SectionLp4';
+import { SectionLp5 } from '../exports/SectionLp5';
+import { SectionLp6 } from '../exports/SectionLp6';
+import { SectionLp7 } from '../exports/SectionLp7';
+import { SectionLp8 } from '../exports/SectionLp8';
 
 const LandingPage = () => {
     const location = useLocation();
@@ -34,6 +38,20 @@ const LandingPage = () => {
 
             <section id="metodologia">
                 <SectionLp4 />
+            </section>
+
+            <section id="monday">
+                <SectionLp5 />
+            </section>
+
+            <section id="nosotros">
+                <SectionLp6 />
+            </section>
+
+            <SectionLp7 />
+
+            <section id="contacto">
+                <SectionLp8 />
             </section>
         </main>
     );
