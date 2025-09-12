@@ -4,5 +4,159 @@
     align-items: center;
     justify-content: center;
     background-color: var(--purple-color);
-    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.sectionContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: var(--white-color);
+    width: 360px;
+}
+
+.sectionTitulo {
+    margin-bottom: 20px;
+}
+
+.sectionTitulo h2 {
+    font-size: 24px;
+}
+
+.cont1 p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.cont2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 360px;
+}
+
+.cont2 img {
+    width: 280px;
+}
+
+.citaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    border-radius: 50px;
+    height: 80px;
+    width: 300px;
+}
+
+.citaContainer p {
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .sectionContainer {
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
+
+    .sectionContenido {
+        flex-direction: row-reverse;
+    }
+
+    .cont1 {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sectionContainer {
+        padding-top: 40px;
+        padding-bottom: 90px;
+    }
+
+    .cont1 {
+        width: 485px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionContainer {
+        padding-top: 80px;
+        padding-bottom: 130px;
+    }
+
+    .sectionContenido {
+        gap: 50px;
+    }
+
+    .cont1 {
+        width: 545px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 36px;
+    }
+
+    .cont1 p {
+        font-size: 18px;
+    }
+
+    .cont2,
+    .cont2 img,
+    .citaContainer {
+        width: 380px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sectionContenido {
+        gap: 100px;
+    }
+
+    .cont1 {
+        width: 666px;
+    }
+
+    .sectionTitulo {
+        margin-bottom: 30px;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 48px;
+    }
+
+    .cont1 p {
+        margin-bottom: 25px;
+        font-size: 22px;
+    }
+
+    .cont2,
+    .cont2 img {
+        width: 500px;
+    }
+
+    .citaContainer {
+        width: 500px;
+        height: 100px;
+    }
+
+    .citaContainer p {
+        font-size: 18px;
+    }
 }
