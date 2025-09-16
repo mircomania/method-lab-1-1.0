@@ -29,10 +29,11 @@
 }
 
 .sectionTitulo h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .cont1 p {
+    line-height: 1.1;
     margin-bottom: 15px;
     font-size: 16px;
 }
@@ -66,7 +67,8 @@
 }
 
 .citaContainer p {
-    font-size: 16px;
+    line-height: 1.1;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -118,9 +120,17 @@
     }
 
     .cont2,
-    .cont2 img,
+    .cont2 img {
+        width: 380px;
+    }
+
     .citaContainer {
         width: 380px;
+        height: 100px;
+    }
+
+    .citaContainer p {
+        font-size: 16px;
     }
 }
 
@@ -153,7 +163,7 @@
 
     .citaContainer {
         width: 500px;
-        height: 100px;
+        height: 110px;
     }
 
     .citaContainer p {

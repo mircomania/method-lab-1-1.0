@@ -1,14 +1,25 @@
-.boton-1 {
+.boton-1,
+.boton-2 {
     display: inline-block;
     text-align: center;
     cursor: pointer;
     border: none;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.boton-1 {
     background: var(--darkblue-color);
     color: var(--white-color);
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
     padding: 15px 35px;
     font-size: 14px;
-    transition: transform 0.5s ease;
+}
+
+.boton-2 {
+    background: var(--yellow-color);
+    color: var(--dark-color);
+    padding: 15px 90px;
+    font-size: 14px;
 }
 
 .boton-1:hover {

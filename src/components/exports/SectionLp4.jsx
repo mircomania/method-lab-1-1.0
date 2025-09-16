@@ -15,7 +15,7 @@ export const SectionLp4 = () => {
                 <div className={styles.titulosContainer}>
                     <header className={styles.sectionTitulo}>
                         <h2 className="light-text">
-                            <strong>Method</strong>ología.
+                            <span className="bold-text">Method</span>ología.
                         </h2>
                     </header>
 

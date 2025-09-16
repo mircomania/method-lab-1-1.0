@@ -12,7 +12,7 @@ export const navLinks = [
         to: '#metodologia',
         label: (
             <>
-                <strong>METHOD</strong>OLOGÍA
+                <span className="bold-text">METHOD</span>OLOGÍA
             </>
         ),
         title: 'Qué metodología seguimos en Method Lab',
