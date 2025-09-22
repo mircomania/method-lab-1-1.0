@@ -64,7 +64,7 @@ export const SectionLp5 = () => {
                     </p>
                 </div>
 
-                <div className={styles.cont12}>
+                <div className={`${styles.singleWrap} ${styles.cont12}`}>
                     <img src={img6} alt="" />
                 </div>
 
