@@ -9,6 +9,8 @@ import icono5 from '../../assets/images/figura-5.1.png';
 import { catsSectionLp4 } from '../utils/catsSectionLp4';
 
 export const SectionLp4 = () => {
+    const colors = ['var(--yellow-color)', 'var(--orange-color)', 'var(--gren-color)', 'var(--blue-color)', 'var(--purple-color)'];
+
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.sectionContenido}>
@@ -19,20 +21,18 @@ export const SectionLp4 = () => {
                         </h2>
                     </header>
 
-                    {catsSectionLp4.map(({ id, titulo, texto }, index) => (
-                        <div key={id} className={styles.listaContainer}>
-                            <div className={styles.listaItem}>
-                                <span className="bold-text">{id}</span>
+                    <div className={styles.listaContainer}>
+                        {catsSectionLp4.map(({ id, titulo, texto }, index) => (
+                            <div key={id} className={`${styles.listaItem} ${styles[`listaItem${index + 1}`]}`}>
+                                <span className="bold-text" style={{ color: colors[index] }}>
+                                    {id}
+                                </span>
 
-                                <div>
-                                    <h3 className="bold-text">{titulo}</h3>
-                                    <p className="light-text">{texto}</p>
-                                </div>
+                                <h3 className="bold-text">{titulo}</h3>
+                                <p className="light-text">{texto}</p>
                             </div>
-
-                            {index < catsSectionLp4.length - 1 && <hr />}
-                        </div>
-                    ))}
+                        ))}
+                    </div>
 
                     <div className={styles.plusContainer}>
                         <p className="bold-text">PLUS</p>
@@ -40,15 +40,11 @@ export const SectionLp4 = () => {
                 </div>
 
                 <div className={styles.iconosContainer}>
-                    <img src={icono1} alt="" />
-
-                    <img src={icono2} alt="" />
-
-                    <img src={icono3} alt="" />
-
-                    <img src={icono4} alt="" />
-
-                    <img src={icono5} alt="" />
+                    <img src={icono1} alt="" className={styles.icono1} />
+                    <img src={icono2} alt="" className={styles.icono2} />
+                    <img src={icono3} alt="" className={styles.icono3} />
+                    <img src={icono4} alt="" className={styles.icono4} />
+                    <img src={icono5} alt="" className={styles.icono5} />
                 </div>
             </div>
         </section>

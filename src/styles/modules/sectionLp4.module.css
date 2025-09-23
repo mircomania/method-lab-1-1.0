@@ -14,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 360px;
 }
 
 .titulosContainer {
@@ -23,51 +22,53 @@
     align-items: start;
     justify-content: start;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     color: var(--darkblue-color);
+    margin-right: 80px;
+}
+
+.titulosContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    border-left: 2px dashed var(--darkblue-color);
+    z-index: 1;
 }
 
 .sectionTitulo h2 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 20px;
 }
 
 .listaContainer {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    justify-content: end;
+    align-items: start;
+    justify-content: center;
+    gap: 25px;
 }
 
 .listaItem {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
-    justify-content: start;
-    width: 346px;
-    gap: 5px;
+    justify-content: center;
+    width: 215px;
 }
 
 .listaItem span {
-    font-size: 16px;
+    font-size: 28px;
 }
 
 .listaItem h3 {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .listaItem p {
-    font-size: 16px;
-}
-
-.listaContainer hr {
-    background-color: var(--darkblue-color);
-    width: 91%;
-    border: none;
-    border-radius: 10px;
-    height: 2px;
-    opacity: 0.5;
-    margin: 10px 0;
+    font-size: 14px;
 }
 
 .inlineLogo {
@@ -85,11 +86,11 @@
     filter: drop-shadow(1px 2px 1px var(--dark-color));
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
     rotate: -25deg;
-    left: -10px;
+    left: 170px;
 }
 
 .plusContainer p {
@@ -104,14 +105,193 @@
     justify-content: space-between;
     pointer-events: none;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     bottom: 0;
     width: 360px;
-    right: -83px;
+    right: -120px;
 }
 
 .iconosContainer img {
     pointer-events: none;
-    width: 165px;
+    width: 240px;
+}
+
+@media (min-width: 768px) {
+    .titulosContainer {
+        margin-right: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sectionContainer {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .titulosContainer {
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .titulosContainer::before {
+        content: '';
+        position: absolute;
+        top: 185px;
+        left: 126px;
+        width: 85%;
+        height: 0;
+        border-top: 2px dashed var(--darkblue-color);
+        z-index: 1;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 38px;
+        margin-bottom: 250px;
+    }
+
+    .listaContainer {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .listaItem {
+        width: 151px;
+    }
+
+    .listaItem span {
+        font-size: 38px;
+    }
+
+    .listaItem h3 {
+        line-height: 1.1;
+        font-size: 16px;
+    }
+
+    .listaItem p {
+        font-size: 16px;
+    }
+
+    .plusContainer {
+        width: 60px;
+        height: 60px;
+        bottom: 215px;
+        left: 800px;
+    }
+
+    .iconosContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 175px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1200px;
+        z-index: 3;
+    }
+
+    .iconosContainer img {
+        width: 180px;
+    }
+
+    .icono1 {
+        position: relative;
+        right: 30px;
+    }
+
+    .icono2 {
+        position: relative;
+        right: 20px;
+    }
+
+    .icono3 {
+        position: relative;
+        right: 20px;
+    }
+
+    .icono5 {
+        position: relative;
+        left: 30px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sectionContainer {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .titulosContainer::before {
+        top: 270px;
+        left: 155px;
+        width: 85%;
+    }
+
+    .sectionTitulo h2 {
+        font-size: 56px;
+        margin-bottom: 350px;
+    }
+
+    .listaContainer {
+        gap: 80px;
+    }
+
+    .listaItem {
+        width: 190px;
+    }
+
+    .listaItem span {
+        font-size: 50px;
+    }
+
+    .listaItem h3 {
+        font-size: 20px;
+    }
+
+    .listaItem p {
+        font-size: 20px;
+    }
+
+    .plusContainer {
+        width: 80px;
+        height: 80px;
+        bottom: 275px;
+        left: 1080px;
+    }
+
+    .plusContainer p {
+        font-size: 16px;
+    }
+
+    .iconosContainer {
+        bottom: 180px;
+    }
+
+    .iconosContainer img {
+        width: 220px;
+    }
+
+    .icono1 {
+        right: 90px;
+    }
+
+    .icono2 {
+        right: 50px;
+    }
+
+    .icono3 {
+        right: 20px;
+    }
+
+    .icono4 {
+        position: relative;
+        left: 20px;
+    }
+
+    .icono5 {
+        left: 85px;
+    }
 }
