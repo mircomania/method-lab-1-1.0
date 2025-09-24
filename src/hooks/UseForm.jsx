@@ -75,6 +75,13 @@ export const useForm = (initialState, submitCallback) => {
         });
     };
 
+    const updateField = (name, value) => {
+        setFormData((prev) => ({ ...prev, [name]: value }));
+        setErrors((prev) => {
+            return Object.fromEntries(Object.entries(prev).filter(([key]) => key !== name));
+        });
+    };
+
     const validateForm = () => {
         const newErrors = {};
 
@@ -133,13 +140,13 @@ export const useForm = (initialState, submitCallback) => {
     };
 
     const validateEquipo = (newErrors) => {
-        if (!formData.equipo.trim()) {
+        if (!formData.equipo.trim() || formData.equipo === 'Selecciona una cantidad') {
             newErrors.equipo = true;
         }
     };
 
     const validateTool = (newErrors) => {
-        if (!formData.tool.trim()) {
+        if (!formData.tool.trim() || formData.tool === 'Selecciona una opción') {
             newErrors.tool = true;
         }
     };
@@ -192,5 +199,5 @@ export const useForm = (initialState, submitCallback) => {
         setErrors({});
     };
 
-    return { formData, errors, loading, handleChange, handleSubmit, showAlert };
+    return { formData, errors, loading, handleChange, updateField, handleSubmit, showAlert };
 };

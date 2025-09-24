@@ -5,12 +5,16 @@ import { useForm } from '../../hooks/UseForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import PhoneInput from 'react-phone-input-2';
+import { CustomSelect } from '../utils/CustomSelect';
 
 import { tools } from '../utils/herramientasForm';
 import { equipos } from '../utils/equipoForm';
 
 export const Form = () => {
-    const { formData, errors, loading, handleChange, handleSubmit, showAlert } = useForm(
+    const equipoOptions = equipos.map((e) => ({ value: e, label: e }));
+    const toolsOptions = tools.map((e) => ({ value: e, label: e }));
+
+    const { formData, errors, loading, handleChange, updateField, handleSubmit, showAlert } = useForm(
         {
             nombre: '',
             email: '',
@@ -56,7 +60,6 @@ export const Form = () => {
                 <PhoneInput
                     country="mx"
                     value={formData.telefono}
-                    /* onChange={(phone) => handleChange({ target: { name: 'telefono', value: phone } })} */
                     onChange={(phone) => {
                         const formatted = `+${phone}`;
                         handleChange({ target: { name: 'telefono', value: formatted } });
@@ -129,54 +132,26 @@ export const Form = () => {
             </div>
 
             {/* EQUIPO */}
-            <div className={styles.campoPrecalificarForm}>
-                <label htmlFor="equipo" className={`light-text ${errors.equipo ? styles.labelError : ''}`} aria-label="¿Cuántos son en tu equipo?">
-                    ¿Cuántos son en tu equipo?
-                </label>
-                <select
-                    className={styles.formControl}
-                    id="equipo"
-                    name="equipo"
-                    value={formData.equipo}
-                    onChange={handleChange}
-                    required
-                    aria-invalid={!!errors.equipo}
-                >
-                    <option value="">Selecciona una cantidad</option>
-                    {equipos.map((equipo) => (
-                        <option key={equipo} value={equipo}>
-                            {equipo}
-                        </option>
-                    ))}
-                </select>
-            </div>
+            <CustomSelect
+                label="¿Cuántos son en tu equipo?"
+                name="equipo"
+                options={equipoOptions}
+                value={formData.equipo}
+                onChange={updateField}
+                error={errors.equipo}
+                placeholder="Selecciona una cantidad"
+            />
 
             {/* TOOL */}
-            <div className={styles.campoPrecalificarForm}>
-                <label
-                    htmlFor="tool"
-                    className={`light-text ${errors.tool ? styles.labelError : ''}`}
-                    aria-label="Herramienta de gestión que pueda usar el usuario"
-                >
-                    Usas alguna herramienta de gestión
-                </label>
-                <select
-                    className={styles.formControl}
-                    id="tool"
-                    name="tool"
-                    value={formData.tool}
-                    onChange={handleChange}
-                    required
-                    aria-invalid={!!errors.tool}
-                >
-                    <option value="">Selecciona una herramienta</option>
-                    {tools.map((tool) => (
-                        <option key={tool} value={tool}>
-                            {tool}
-                        </option>
-                    ))}
-                </select>
-            </div>
+            <CustomSelect
+                label="Usas alguna herramienta de gestión"
+                name="tool"
+                options={toolsOptions}
+                value={formData.tool}
+                onChange={updateField}
+                error={errors.tool}
+                placeholder="Selecciona una opción"
+            />
 
             {/* BOTON ENVIAR */}
             <div className={styles.contentEnvio}>
