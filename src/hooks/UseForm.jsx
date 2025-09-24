@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+import { PhoneNumberUtil } from 'google-libphonenumber';
 import Swal from 'sweetalert2';
 
 export const useForm = (initialState, submitCallback) => {
@@ -6,6 +8,8 @@ export const useForm = (initialState, submitCallback) => {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
     const [utmParams, setUtmParams] = useState({});
+
+    const phoneUtil = PhoneNumberUtil.getInstance();
 
     useEffect(() => {
         const DAYS_TO_EXPIRE = 15;
@@ -61,9 +65,7 @@ export const useForm = (initialState, submitCallback) => {
         const { name, value } = e.target;
 
         if (name === 'telefono') {
-            const cleanValue = value.replace(/\D/g, '');
-            const formattedValue = cleanValue.startsWith('52') ? '+' + cleanValue : '+52' + cleanValue;
-            setFormData((prev) => ({ ...prev, telefono: formattedValue }));
+            setFormData((prev) => ({ ...prev, telefono: value }));
         } else {
             setFormData((prev) => ({ ...prev, [name]: value }));
         }
@@ -78,7 +80,9 @@ export const useForm = (initialState, submitCallback) => {
 
         validateNombre(newErrors);
 
-        validateApellido(newErrors);
+        validateEmail(newErrors);
+
+        validateTelefono(newErrors);
 
         validateEmpresa(newErrors);
 
@@ -87,8 +91,6 @@ export const useForm = (initialState, submitCallback) => {
         validateEquipo(newErrors);
 
         validateTool(newErrors);
-
-        validateEmail(newErrors);
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -100,9 +102,21 @@ export const useForm = (initialState, submitCallback) => {
         }
     };
 
-    const validateApellido = (newErrors) => {
-        if (!formData.apellido.trim()) {
-            newErrors.apellido = true;
+    const validateEmail = (newErrors) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.email.trim() || !emailRegex.test(formData.email)) {
+            newErrors.email = true;
+        }
+    };
+
+    const validateTelefono = (newErrors) => {
+        try {
+            const number = phoneUtil.parse(formData.telefono);
+            if (!phoneUtil.isValidNumber(number)) {
+                newErrors.telefono = true;
+            }
+        } catch (e) {
+            newErrors.telefono = true;
         }
     };
 
@@ -125,15 +139,8 @@ export const useForm = (initialState, submitCallback) => {
     };
 
     const validateTool = (newErrors) => {
-        if (!formData.tool.trim() || formData.tool === 'N/A') {
+        if (!formData.tool.trim()) {
             newErrors.tool = true;
-        }
-    };
-
-    const validateEmail = (newErrors) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!formData.email.trim() || !emailRegex.test(formData.email)) {
-            newErrors.email = true;
         }
     };
 
@@ -148,12 +155,12 @@ export const useForm = (initialState, submitCallback) => {
 
             const formDataToSend = {
                 nombre: formData.nombre,
-                apellido: formData.apellido,
+                telefono: formData.telefono,
+                email: formData.email,
                 empresa: formData.empresa,
                 rol: formData.rol,
                 equipo: formData.equipo,
                 tool: formData.tool,
-                email: formData.email,
                 ...utmWithoutTimestamp,
             };
             //'http://localhost:5000/submit'

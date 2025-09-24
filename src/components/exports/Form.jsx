@@ -4,19 +4,21 @@ import { useForm } from '../../hooks/UseForm';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import PhoneInput from 'react-phone-input-2';
 
 import { tools } from '../utils/herramientasForm';
+import { equipos } from '../utils/equipoForm';
 
 export const Form = () => {
     const { formData, errors, loading, handleChange, handleSubmit, showAlert } = useForm(
         {
             nombre: '',
-            apellido: '',
+            email: '',
+            telefono: '',
             empresa: '',
             rol: '',
             equipo: '',
             tool: '',
-            email: '',
         },
         (success, data) => {
             if (success) {
@@ -29,40 +31,65 @@ export const Form = () => {
 
     return (
         <form onSubmit={handleSubmit} className={styles.form} noValidate>
-            <div className={styles.dobleInput}>
-                {/* NOMBRE */}
-                <div className={styles.campoPrecalificarForm}>
-                    <label htmlFor="nombre" className={`light-text ${errors.nombre ? styles.labelError : ''}`} aria-label="Nombre del usuario">
-                        Nombre
-                    </label>
-                    <input
-                        type="text"
-                        className={styles.formControl}
-                        id="nombre"
-                        name="nombre"
-                        value={formData.nombre}
-                        onChange={handleChange}
-                        required
-                        aria-invalid={!!errors.nombre}
-                    />
-                </div>
+            {/* NOMBRE Y APELLIDO */}
+            <div className={styles.campoPrecalificarForm}>
+                <label htmlFor="nombre" className={`light-text ${errors.nombre ? styles.labelError : ''}`} aria-label="Nombre del usuario">
+                    Nombre y apellido
+                </label>
+                <input
+                    type="text"
+                    className={styles.formControl}
+                    id="nombre"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    required
+                    aria-invalid={!!errors.nombre}
+                />
+            </div>
 
-                {/* APELLIDO */}
-                <div className={styles.campoPrecalificarForm}>
-                    <label htmlFor="apellido" className={`light-text ${errors.apellido ? styles.labelError : ''}`} aria-label="Apellido del usuario">
-                        Apellido
-                    </label>
-                    <input
-                        type="text"
-                        className={styles.formControl}
-                        id="apellido"
-                        name="apellido"
-                        value={formData.apellido}
-                        onChange={handleChange}
-                        required
-                        aria-invalid={!!errors.apellido}
-                    />
-                </div>
+            {/* TELEFONO */}
+            <div className={styles.campoPrecalificarForm}>
+                <label htmlFor="telefono" className={`light-text ${errors.telefono ? styles.labelError : ''}`}>
+                    Teléfono
+                </label>
+                <PhoneInput
+                    country="mx"
+                    value={formData.telefono}
+                    /* onChange={(phone) => handleChange({ target: { name: 'telefono', value: phone } })} */
+                    onChange={(phone) => {
+                        const formatted = `+${phone}`;
+                        handleChange({ target: { name: 'telefono', value: formatted } });
+                    }}
+                    inputClass={styles.formControl}
+                    inputProps={{
+                        name: 'telefono',
+                        required: true,
+                        autoComplete: 'tel',
+                        id: 'telefono',
+                        'aria-invalid': !!errors.telefono,
+                    }}
+                    enableSearch
+                    preferredCountries={['mx', 'us']}
+                />
+            </div>
+
+            {/* EMAIL */}
+            <div className={styles.campoPrecalificarForm}>
+                <label htmlFor="email" className={`light-text ${errors.email ? styles.labelError : ''}`} aria-label="email del usuario">
+                    Correo electronico
+                </label>
+                <input
+                    type="email"
+                    className={styles.formControl}
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    autoComplete="email"
+                    required
+                    aria-invalid={!!errors.email}
+                />
             </div>
 
             <div className={styles.dobleInput}>
@@ -106,8 +133,7 @@ export const Form = () => {
                 <label htmlFor="equipo" className={`light-text ${errors.equipo ? styles.labelError : ''}`} aria-label="¿Cuántos son en tu equipo?">
                     ¿Cuántos son en tu equipo?
                 </label>
-                <input
-                    type="text"
+                <select
                     className={styles.formControl}
                     id="equipo"
                     name="equipo"
@@ -115,7 +141,14 @@ export const Form = () => {
                     onChange={handleChange}
                     required
                     aria-invalid={!!errors.equipo}
-                />
+                >
+                    <option value="">Selecciona una cantidad</option>
+                    {equipos.map((equipo) => (
+                        <option key={equipo} value={equipo}>
+                            {equipo}
+                        </option>
+                    ))}
+                </select>
             </div>
 
             {/* TOOL */}
@@ -134,32 +167,15 @@ export const Form = () => {
                     value={formData.tool}
                     onChange={handleChange}
                     required
-                    aria-invalid={!!errors.sesion}
+                    aria-invalid={!!errors.tool}
                 >
+                    <option value="">Selecciona una herramienta</option>
                     {tools.map((tool) => (
                         <option key={tool} value={tool}>
                             {tool}
                         </option>
                     ))}
                 </select>
-            </div>
-
-            {/* EMAIL */}
-            <div className={styles.campoPrecalificarForm}>
-                <label htmlFor="email" className={`light-text ${errors.email ? styles.labelError : ''}`} aria-label="email del usuario">
-                    Tu correo de contacto
-                </label>
-                <input
-                    type="email"
-                    className={styles.formControl}
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    autoComplete="email"
-                    required
-                    aria-invalid={!!errors.email}
-                />
             </div>
 
             {/* BOTON ENVIAR */}

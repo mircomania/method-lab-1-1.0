@@ -16,9 +16,11 @@
         "@fortawesome/free-brands-svg-icons": "^7.0.0",
         "@fortawesome/free-solid-svg-icons": "^7.0.0",
         "@fortawesome/react-fontawesome": "^0.2.3",
+        "google-libphonenumber": "^3.2.43",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-helmet-async": "^2.0.5",
+        "react-phone-input-2": "^2.15.1",
         "react-router-dom": "^7.8.0",
         "sweetalert2": "^11.23.0"
     },

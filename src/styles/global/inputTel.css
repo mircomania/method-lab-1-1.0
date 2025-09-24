@@ -1,0 +1,126 @@
+/* react-phone-input-2 sobreescritura */
+.react-tel-input {
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+/* input */
+.react-tel-input .form-control {
+    border-radius: 50px;
+    padding: 6px 16px;
+    padding-left: 50px;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    font-family: 'Futura-Medium', sans-serif;
+}
+
+/* placeholder */
+.react-tel-input .form-control::placeholder {
+    color: var(--dark-color);
+}
+
+/* Bandera container */
+
+.react-tel-input .flag-dropdown {
+    border-radius: 50px 0 0 50px;
+    background: var(--white-color);
+    border: none;
+    height: 30px;
+    display: flex;
+    align-items: end;
+    padding-left: 8px;
+    box-shadow: none;
+}
+
+/* Bandera */
+
+.react-tel-input .selected-flag {
+    display: flex;
+    align-items: start;
+    padding: 0 8px;
+    height: 100%;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .flag-dropdown:hover {
+    border-radius: 50px 0 0 50px;
+}
+
+.react-tel-input .flag-dropdown.open {
+    border-radius: 50px 0 0 50px;
+    background: var(--white-color);
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+    background: var(--white-color);
+    border-radius: 50px 0 0 50px;
+}
+
+/* lista desplegable */
+.react-tel-input .country-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border: none;
+    z-index: 9999;
+    outline: none;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0px 0px 0px -8px;
+    box-shadow: none;
+    background-color: var(--white-color);
+    width: 340px;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-radius: 10px 10px 20px 20px;
+}
+
+.react-tel-input .search-emoji {
+    display: none;
+}
+
+.react-tel-input .country-list .search {
+    background-color: var(--white-color);
+    display: block;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 6px 8px;
+}
+
+.react-tel-input .country-list .search-box {
+    width: 100%;
+    margin-left: 0px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Cada país en la lista */
+.react-tel-input .country-list .country.highlight {
+    background-color: var(--white-color);
+}
+
+.react-tel-input .country-list .country {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--dark-color);
+    width: 100%;
+    font-family: 'Futura-Medium', sans-serif;
+}
+
+.react-tel-input .country-list .country .dial-code {
+    color: var(--dark-color);
+}

@@ -1,1 +1,1 @@
-export const tools = ['N/A', 'Herramienta 1', 'Herramienta 2', 'Herramienta 3', 'Herramienta 4'];
+export const tools = ['Sí, y funciona bien', 'Sí, pero no funciona como esperamos', 'No usamos ningún software'];
