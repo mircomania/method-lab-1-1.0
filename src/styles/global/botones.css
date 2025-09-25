@@ -1,6 +1,9 @@
 .boton-1,
 .boton-2 {
-    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     cursor: pointer;
     border: none;

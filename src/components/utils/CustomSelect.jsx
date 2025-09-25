@@ -12,8 +12,8 @@ export const CustomSelect = ({ label, name, options, value, onChange, error, pla
 
         <Select
             options={options}
-            value={options.find((opt) => opt.value === value)}
-            onChange={(selected) => onChange(name, selected.value)}
+            value={options.find((opt) => opt.value === value) || null}
+            onChange={(selected) => onChange(name, selected?.value || '')}
             placeholder={placeholder}
             aria-invalid={!!error}
             isSearchable={false}

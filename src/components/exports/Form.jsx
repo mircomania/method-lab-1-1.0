@@ -59,7 +59,7 @@ export const Form = () => {
                 </label>
                 <PhoneInput
                     country="mx"
-                    value={formData.telefono}
+                    value={formData.telefono || ''}
                     onChange={(phone) => {
                         const formatted = `+${phone}`;
                         handleChange({ target: { name: 'telefono', value: formatted } });
@@ -74,6 +74,8 @@ export const Form = () => {
                     }}
                     enableSearch
                     preferredCountries={['mx', 'us']}
+                    placeholder=""
+                    disablePlaceholder={true}
                 />
             </div>
 

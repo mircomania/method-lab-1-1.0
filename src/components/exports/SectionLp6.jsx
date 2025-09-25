@@ -33,7 +33,7 @@ export const SectionLp6 = () => {
 
                     <div className={styles.citaContainer}>
                         <p className="light-text">
-                            &quot;El crecimiento de las empresas <br /> pueden suceder sin la necesidad de <br /> vivir bajo el caos&quot;
+                            &quot;El crecimiento de las empresas <br /> puede suceder sin la necesidad de <br /> vivir bajo el caos&quot;
                         </p>
                     </div>
                 </div>

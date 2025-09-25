@@ -171,7 +171,7 @@ export const useForm = (initialState, submitCallback) => {
                 ...utmWithoutTimestamp,
             };
             //'http://localhost:5000/submit'
-            const response = await fetch('/backend/submit.php', {
+            const response = await fetch('http://localhost:5000/api/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formDataToSend),
@@ -195,7 +195,12 @@ export const useForm = (initialState, submitCallback) => {
     };
 
     const resetForm = () => {
-        setFormData(initialState);
+        setFormData({
+            ...initialState,
+            telefono: '+52',
+            equipo: '',
+            tool: '',
+        });
         setErrors({});
     };
 
