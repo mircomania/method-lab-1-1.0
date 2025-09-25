@@ -2,11 +2,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const BotonNav = ({
-    to = '#registro',
-    ariaLabel = 'Ir a la sección de contacto de Mejoravit',
+    to = '#contacto',
+    ariaLabel = 'Ir a la sección de contacto de MethodLab',
     className = 'boton-1 light-text',
     title = 'Haz clic para ir a la sección de contacto',
-    children = '¡Simula tu crédito ahora!',
+    children = 'IR',
     dataCta,
     dataLink,
 }) => {
@@ -23,7 +23,7 @@ export const BotonNav = ({
             const targetElement = document.getElementById(idDestino);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop,
                     behavior: 'smooth',
                 });
             }

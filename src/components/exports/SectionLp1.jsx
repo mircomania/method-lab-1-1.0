@@ -18,9 +18,7 @@ export const SectionLp1 = () => {
             </header>
 
             <div className={styles.sectionContenido}>
-                <BotonNav to="/" ariaLabel="Ir a la página de inicio" title="Haz clic para ir a la página de inicio" dataLink="error-home-btn">
-                    HAZ TU NEGOCIO MÁS SIMPLE.
-                </BotonNav>
+                <BotonNav dataCta="home-btn-1">HAZ TU NEGOCIO MÁS SIMPLE.</BotonNav>
             </div>
 
             <div className={styles.sectionImagenes}>

@@ -132,28 +132,29 @@ export const Form = () => {
                     />
                 </div>
             </div>
+            <div className={styles.dobleInput2}>
+                {/* EQUIPO */}
+                <CustomSelect
+                    label="¿Cuántos son en tu equipo?"
+                    name="equipo"
+                    options={equipoOptions}
+                    value={formData.equipo}
+                    onChange={updateField}
+                    error={errors.equipo}
+                    placeholder="Selecciona una cantidad"
+                />
 
-            {/* EQUIPO */}
-            <CustomSelect
-                label="¿Cuántos son en tu equipo?"
-                name="equipo"
-                options={equipoOptions}
-                value={formData.equipo}
-                onChange={updateField}
-                error={errors.equipo}
-                placeholder="Selecciona una cantidad"
-            />
-
-            {/* TOOL */}
-            <CustomSelect
-                label="Usas alguna herramienta de gestión"
-                name="tool"
-                options={toolsOptions}
-                value={formData.tool}
-                onChange={updateField}
-                error={errors.tool}
-                placeholder="Selecciona una opción"
-            />
+                {/* TOOL */}
+                <CustomSelect
+                    label="Usas alguna herramienta de gestión"
+                    name="tool"
+                    options={toolsOptions}
+                    value={formData.tool}
+                    onChange={updateField}
+                    error={errors.tool}
+                    placeholder="Selecciona una opción"
+                />
+            </div>
 
             {/* BOTON ENVIAR */}
             <div className={styles.contentEnvio}>

@@ -124,3 +124,26 @@
 .react-tel-input .country-list .country .dial-code {
     color: var(--dark-color);
 }
+
+@media (min-width: 1700px) {
+    .react-tel-input .form-control {
+        font-size: 18px;
+        height: 38px;
+    }
+
+    .react-tel-input .flag-dropdown {
+        height: 38px;
+    }
+
+    .react-tel-input .country-list {
+        width: 700px;
+    }
+
+    .react-tel-input .country-list .search-box {
+        font-size: 18px;
+    }
+
+    .react-tel-input .country-list .country {
+        font-size: 18px;
+    }
+}

@@ -13,20 +13,24 @@ export const SectionLp8 = () => {
             <div className={styles.corteSection}></div>
 
             <div className={styles.sectionContenido}>
-                <div className={styles.cont1}>
-                    <header className={styles.sectionTitulo}>
-                        <h2 className="bold-text">Diseñemos tu método.</h2>
-                    </header>
+                <div className={styles.contenido}>
+                    <div className={styles.sectionText}>
+                        <header className={styles.sectionTitulo}>
+                            <h2 className="bold-text">Diseñemos tu método.</h2>
+                        </header>
 
-                    <p className="light-text">
-                        ¿Listo para trabajar con orden, foco y resultados? Tu negocio no necesita más esfuerzo, necesita estructura.
-                    </p>
+                        <p className="light-text">
+                            ¿Listo para trabajar con orden, foco y resultados? Tu negocio no necesita más esfuerzo, necesita estructura.
+                        </p>
 
-                    <p className="light-text">Agenda una llamada gratuita con nosotros y descubre cómo podemos ayudarte a transformar tu empresa.</p>
-                </div>
+                        <p className="light-text">
+                            Agenda una llamada gratuita con nosotros y descubre cómo podemos ayudarte a transformar tu empresa.
+                        </p>
+                    </div>
 
-                <div className={styles.sectionForm}>
-                    <Form />
+                    <div className={styles.sectionForm}>
+                        <Form />
+                    </div>
                 </div>
 
                 <div className={styles.sectionImagenes}>

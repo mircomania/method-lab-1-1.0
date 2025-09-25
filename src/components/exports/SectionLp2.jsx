@@ -17,9 +17,7 @@ export const SectionLp2 = () => {
             </header>
 
             <div>
-                <BotonNav to="/" ariaLabel="Ir a la página de inicio" title="Haz clic para ir a la página de inicio" dataLink="error-home-btn">
-                    DISEÑEMOS TU MÉTODO.
-                </BotonNav>
+                <BotonNav dataCta="home-btn-2">DISEÑEMOS TU MÉTODO.</BotonNav>
             </div>
         </section>
     );

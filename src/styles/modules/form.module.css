@@ -88,6 +88,22 @@
     margin-top: 5px;
 }
 
+@media (min-width: 1200px) {
+    .dobleInput input {
+        width: 300px;
+    }
+
+    .dobleInput2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .dobleInput2 input {
+        width: 243px;
+    }
+}
+
 @media (min-width: 1400px) {
     .formControl {
         padding: 5px 0;
@@ -95,8 +111,20 @@
 }
 
 @media (min-width: 1700px) {
-    .campoPrecalificarForm,
+    .campoPrecalificarForm label {
+        font-size: 16px;
+    }
+
     .formControl {
-        font-size: 20px;
+        font-size: 18px;
+        height: 38px;
+    }
+
+    .dobleInput input {
+        width: 340px;
+    }
+
+    .dobleInput2 input {
+        width: 283px;
     }
 }
