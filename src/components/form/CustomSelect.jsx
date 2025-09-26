@@ -2,14 +2,22 @@ import { useMediaQuery } from '../../hooks/UseMediaQuery';
 import { useMemo } from 'react';
 
 import styles from '../../styles/modules/form.module.css';
-import { StylesSelect } from '../utils/StylesSelect';
+import { StylesSelect } from './StylesSelect';
 
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 
 export const CustomSelect = ({ label, name, options, value, onChange, error, placeholder }) => {
     const isWide = useMediaQuery('(min-width: 1700px)');
-    const customStyles = useMemo(() => StylesSelect(isWide), [isWide]);
+    const isMedium = useMediaQuery('(min-width: 1200px) and (max-width: 1699px)');
+
+    const breakpoint = useMemo(() => {
+        if (isWide) return 'wide';
+        if (isMedium) return 'medium';
+        return 'small';
+    }, [isWide, isMedium]);
+
+    const customStyles = useMemo(() => StylesSelect(breakpoint), [breakpoint]);
 
     return (
         <div className={styles.campoPrecalificarForm}>

@@ -1,4 +1,4 @@
-export const StylesSelect = (isWide) => {
+export const StylesSelect = (breakpoint) => {
     return {
         control: (provided) => ({
             ...provided,
@@ -9,10 +9,11 @@ export const StylesSelect = (isWide) => {
             borderStyle: 'none',
             boxShadow: 'none',
             border: 'none',
-            fontSize: isWide ? '18px' : '16px',
+            fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
             padding: '0px 0px',
-            maxHeight: isWide ? '38px' : '30px',
-            minHeight: isWide ? '38px' : '30px',
+            maxHeight: breakpoint === 'wide' ? '38px' : breakpoint === 'medium' ? '30px' : '30px',
+            minHeight: breakpoint === 'wide' ? '38px' : breakpoint === 'medium' ? '30px' : '30px',
+            maxWidth: breakpoint === 'wide' ? '340px' : breakpoint === 'medium' ? '300px' : '340px',
             backgroundColor: 'var(--white-color)',
             color: 'var(--dark-color)',
             fontFamily: 'Futura-Medium',
@@ -31,7 +32,7 @@ export const StylesSelect = (isWide) => {
             marginLeft: '2px',
             marginRight: '0px',
             fontFamily: 'Futura-Medium',
-            fontSize: isWide ? '18px' : '16px',
+            fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
         }),
 
         multiValue: (provided) => ({
@@ -48,7 +49,7 @@ export const StylesSelect = (isWide) => {
             ...provided,
             color: 'var(--dark-color)',
             fontFamily: 'Futura-Medium',
-            fontSize: isWide ? '18px' : '16px',
+            fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
         }),
 
         multiValueRemove: (provided) => ({
@@ -59,7 +60,7 @@ export const StylesSelect = (isWide) => {
         singleValue: (provided) => ({
             ...provided,
             color: 'var(--dark-color)',
-            fontSize: isWide ? '18px' : '16px',
+            fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
             padding: '0px 0px',
         }),
 
@@ -102,13 +103,13 @@ export const StylesSelect = (isWide) => {
             maxHeight: '300px',
             paddingBottom: '0px',
             paddingTop: '0px',
-            borderRadius: isWide ? '20px 20px 10px 10px' : '15px 15px 10px 10px',
+            borderRadius: breakpoint === 'wide' ? '20px 20px 10px 10px' : breakpoint === 'medium' ? '15px 15px 10px 10px' : '15px 15px 10px 10px',
         }),
 
         option: (provided) => ({
             ...provided,
-            padding: isWide ? '6px 12px' : '4px 12px',
-            fontSize: isWide ? '18px' : '16px',
+            padding: breakpoint === 'wide' ? '6px 12px' : breakpoint === 'medium' ? '4px 12px' : '4px 12px',
+            fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
             cursor: 'pointer',
             fontFamily: 'Futura-Medium',
             backgroundColor: 'var(--white-color)',

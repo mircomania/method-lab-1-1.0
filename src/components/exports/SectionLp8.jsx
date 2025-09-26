@@ -5,7 +5,7 @@ import img2 from '../../assets/images/figura-2.png';
 import img3 from '../../assets/images/figura-3.png';
 import img5 from '../../assets/images/figura-5.png';
 
-import { Form } from './Form';
+import { Form } from '../form/Form';
 
 export const SectionLp8 = () => {
     return (

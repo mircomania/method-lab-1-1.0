@@ -5,10 +5,10 @@ import { useForm } from '../../hooks/UseForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import PhoneInput from 'react-phone-input-2';
-import { CustomSelect } from '../utils/CustomSelect';
+import { CustomSelect } from './CustomSelect';
 
-import { tools } from '../utils/herramientasForm';
-import { equipos } from '../utils/equipoForm';
+import { tools } from './herramientasForm';
+import { equipos } from './equipoForm';
 
 export const Form = () => {
     const equipoOptions = equipos.map((e) => ({ value: e, label: e }));
