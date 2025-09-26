@@ -52,7 +52,7 @@
     padding: 4px 0;
     margin-bottom: 15px;
     background-color: var(--white-color);
-    color: var(--dark-color);
+    color: var(--darkblue-color);
     border: none;
     font-size: 16px;
     resize: none;
@@ -84,7 +84,7 @@
 .mensajeErrorGeneral p {
     position: absolute;
     z-index: 1;
-    color: var(--text-color-2);
+    color: var(--white-color);
     margin-top: 5px;
 }
 

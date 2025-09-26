@@ -15,7 +15,7 @@ export const StylesSelect = (breakpoint) => {
             minHeight: breakpoint === 'wide' ? '38px' : breakpoint === 'medium' ? '30px' : '30px',
             maxWidth: breakpoint === 'wide' ? '340px' : breakpoint === 'medium' ? '300px' : '340px',
             backgroundColor: 'var(--white-color)',
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             fontFamily: 'Futura-Medium',
             marginBottom: '15px',
         }),
@@ -23,12 +23,12 @@ export const StylesSelect = (breakpoint) => {
         valueContainer: (provided) => ({
             ...provided,
             padding: '0px 10px',
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
         }),
 
         placeholder: (provided) => ({
             ...provided,
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             marginLeft: '2px',
             marginRight: '0px',
             fontFamily: 'Futura-Medium',
@@ -40,26 +40,26 @@ export const StylesSelect = (breakpoint) => {
             margin: '2px',
             paddingTop: '0',
             paddingBottom: '2px',
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             backgroundColor: 'red',
             borderRadius: '12px',
         }),
 
         multiValueLabel: (provided) => ({
             ...provided,
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             fontFamily: 'Futura-Medium',
             fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
         }),
 
         multiValueRemove: (provided) => ({
             ...provided,
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
         }),
 
         singleValue: (provided) => ({
             ...provided,
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             fontSize: breakpoint === 'wide' ? '18px' : breakpoint === 'medium' ? '16px' : '16px',
             padding: '0px 0px',
         }),
@@ -74,7 +74,7 @@ export const StylesSelect = (breakpoint) => {
 
         indicatorSeparator: (provided) => ({
             ...provided,
-            backgroundColor: 'var(--dark-color)',
+            backgroundColor: 'var(--darkblue-color)',
             width: '1px',
             marginTop: 0,
             marginBottom: 0,
@@ -83,7 +83,7 @@ export const StylesSelect = (breakpoint) => {
         dropdownIndicator: (provided) => ({
             ...provided,
             padding: '0px 8px',
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             ':hover': { color: 'var(--orange-color)' },
         }),
 
@@ -113,7 +113,7 @@ export const StylesSelect = (breakpoint) => {
             cursor: 'pointer',
             fontFamily: 'Futura-Medium',
             backgroundColor: 'var(--white-color)',
-            color: 'var(--dark-color)',
+            color: 'var(--darkblue-color)',
             ':hover': { backgroundColor: 'white' },
         }),
     };
