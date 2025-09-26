@@ -57,64 +57,72 @@ export const Footer = () => {
 
     return (
         <footer className="footer">
-            {/* REDES */}
-            <div className="redes-footer light-text">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="linkedin" data-link="footer-linkedin-link">
-                    LINKEDIN
-                </a>
+            <div className="footer-contenido">
+                {/* REDES */}
+                <div className="redes-footer light-text">
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="linkedin"
+                        data-link="footer-linkedin-link"
+                    >
+                        LINKEDIN
+                    </a>
 
-                <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="instagram"
-                    data-link="footer-instagram-link"
-                >
-                    INSTAGRAM
-                </a>
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="instagram"
+                        data-link="footer-instagram-link"
+                    >
+                        INSTAGRAM
+                    </a>
 
-                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="tiktok" data-link="footer-tiktok-link">
-                    TIK TOK
-                </a>
-            </div>
-
-            <div className="logo-links-footer">
-                {/* LOGO  */}
-                <div className="logo-footer">
-                    <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
-                        <img src={LogoFooter} alt="Logotipo de MethodLab en el pie de página" />
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="tiktok" data-link="footer-tiktok-link">
+                        TIK TOK
                     </a>
                 </div>
 
-                {/* LINKS  */}
-                <div className="links-footer">
-                    <ul className="menu-footer light-text">
-                        {navLinks.map((item) => (
-                            <li key={item.id}>
-                                {item.to.startsWith('#') || item.to === '/' ? (
-                                    <a
-                                        href={item.to}
-                                        onClick={(e) => handleLinkClick(e, item)}
-                                        className={activeLink === item.id ? 'active' : ''}
-                                        title={item.title}
-                                        data-link={item.dataLink}
-                                    >
-                                        {item.label2}
-                                    </a>
-                                ) : (
-                                    <NavLink
-                                        to={item.to}
-                                        title={item.title}
-                                        className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
-                                        onClick={() => setActiveLink(item.id)}
-                                        data-link={item.dataLink}
-                                    >
-                                        {item.label2}
-                                    </NavLink>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
+                <div className="logo-links-footer">
+                    {/* LOGO  */}
+                    <div className="logo-footer">
+                        <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
+                            <img src={LogoFooter} alt="Logotipo de MethodLab en el pie de página" />
+                        </a>
+                    </div>
+
+                    {/* LINKS  */}
+                    <div className="links-footer">
+                        <ul className="menu-footer light-text">
+                            {navLinks.map((item) => (
+                                <li key={item.id}>
+                                    {item.to.startsWith('#') || item.to === '/' ? (
+                                        <a
+                                            href={item.to}
+                                            onClick={(e) => handleLinkClick(e, item)}
+                                            className={activeLink === item.id ? 'active' : ''}
+                                            title={item.title}
+                                            data-link={item.dataLink}
+                                        >
+                                            {item.label2}
+                                        </a>
+                                    ) : (
+                                        <NavLink
+                                            to={item.to}
+                                            title={item.title}
+                                            className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
+                                            onClick={() => setActiveLink(item.id)}
+                                            data-link={item.dataLink}
+                                        >
+                                            {item.label2}
+                                        </NavLink>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
