@@ -2,7 +2,95 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
+    overflow: hidden;
     background-color: var(--blue-color);
-    min-height: 100vh;
+    min-height: 600px;
+    padding: 40px 0;
+}
+
+.contenidoAdicional1 {
+    margin-top: 280px;
+}
+
+.contenidoAdicional2 {
+    margin-top: 180px;
+}
+
+.sectionTitulo {
+    color: var(--white-color);
+    margin-bottom: 20px;
+    width: 360px;
+}
+
+.sectionTitulo h2 {
+    font-size: 18px;
+}
+
+.sectionContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.sectionComentarios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.comentario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--white-color);
+    gap: 20px;
+    padding: 0 20px;
+    padding-top: 20px;
+    width: 300px;
+    height: 250px;
+}
+
+.comentarioPersona {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.comentarioDatos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: var(--darkblue-color);
+}
+
+.comentarioDatos h3 {
+    line-height: 1.1;
+    font-size: 16px;
+}
+
+.comentarioDatos h4 {
+    line-height: 1.1;
+    font-size: 16px;
+}
+
+.comentario p {
+    color: var(--darkblue-color);
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.sectionLogos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }

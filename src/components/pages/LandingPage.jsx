@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { TitleSEO } from '../utils/TitleSEO';
+
 import { SectionLp1 } from '../exports/SectionLp1';
 import { SectionLp2 } from '../exports/SectionLp2';
 import { SectionLp3 } from '../exports/SectionLp3';
@@ -28,6 +30,12 @@ const LandingPage = () => {
 
     return (
         <main>
+            <TitleSEO
+                title="Method Lab | Crece sin caos"
+                description="Consultoría que organiza y optimiza procesos con monday.com para que tu empresa crezca sin caos."
+                canonical="https://methodlab.mx/"
+            />
+
             <SectionLp1 />
 
             <SectionLp2 />
