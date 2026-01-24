@@ -1,6 +1,3 @@
-import { useMediaQuery } from '../../hooks/UseMediaQuery';
-import { useMemo } from 'react';
-
 import styles from '../../styles/modules/form.module.css';
 import { StylesSelect } from './StylesSelect';
 
@@ -8,19 +5,8 @@ import Select from 'react-select';
 import PropTypes from 'prop-types';
 
 export const CustomSelect = ({ label, name, options, value, onChange, error, placeholder }) => {
-    const isWide = useMediaQuery('(min-width: 1700px)');
-    const isMedium = useMediaQuery('(min-width: 1200px) and (max-width: 1699px)');
-
-    const breakpoint = useMemo(() => {
-        if (isWide) return 'wide';
-        if (isMedium) return 'medium';
-        return 'small';
-    }, [isWide, isMedium]);
-
-    const customStyles = useMemo(() => StylesSelect(breakpoint), [breakpoint]);
-
     return (
-        <div className={styles.campoPrecalificarForm}>
+        <div className={`${styles.inputContainer}  select-scope`}>
             <label htmlFor={name} className={`light-text ${error ? styles.labelError : ''}`}>
                 {label}
             </label>
@@ -32,9 +18,10 @@ export const CustomSelect = ({ label, name, options, value, onChange, error, pla
                 placeholder={placeholder}
                 aria-invalid={!!error}
                 isSearchable={false}
+                inputId={name}
                 /* menuIsOpen={true} */
                 required
-                styles={customStyles}
+                styles={StylesSelect}
             />
         </div>
     );
@@ -48,7 +35,7 @@ CustomSelect.propTypes = {
         PropTypes.shape({
             value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             label: PropTypes.string.isRequired,
-        })
+        }),
     ).isRequired,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onChange: PropTypes.func.isRequired,

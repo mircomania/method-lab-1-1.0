@@ -13,19 +13,19 @@
     width: 165px;
 }
 
-.campoPrecalificarForm {
+.inputContainer {
     display: flex;
     flex-direction: column;
     text-align: start;
 }
 
-.campoPrecalificarForm select,
-.campoPrecalificarForm input {
+.inputContainer select,
+.inputContainer input {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.campoPrecalificarForm label {
+.inputContainer label {
     margin-bottom: 10px;
     margin-left: 2px;
     font-size: 14px;
@@ -43,7 +43,7 @@
     padding-left: 10px;
 }
 
-.formControl {
+.input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -59,7 +59,7 @@
     padding-left: 50px;
 }
 
-.formControl:focus {
+.input:focus {
     outline: none;
 }
 
@@ -105,17 +105,17 @@
 }
 
 @media (min-width: 1400px) {
-    .formControl {
+    .input {
         padding: 5px 0;
     }
 }
 
 @media (min-width: 1700px) {
-    .campoPrecalificarForm label {
+    .inputContainer label {
         font-size: 16px;
     }
 
-    .formControl {
+    .input {
         font-size: 18px;
         height: 38px;
     }

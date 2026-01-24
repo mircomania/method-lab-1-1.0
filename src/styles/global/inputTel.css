@@ -29,7 +29,7 @@
 
 .react-tel-input .flag-dropdown {
     border-radius: 50px 0 0 50px;
-    background: var(--white-color);
+    background: transparent;
     border: none;
     height: 30px;
     display: flex;
@@ -50,6 +50,7 @@
 .react-tel-input .selected-flag:hover,
 .react-tel-input .flag-dropdown:hover {
     border-radius: 50px 0 0 50px;
+    background: transparent;
 }
 
 .react-tel-input .flag-dropdown.open {
@@ -105,7 +106,7 @@
     box-sizing: border-box;
 }
 
-/* Cada país en la lista */
+/* PAIS SELECCIONADO EN LA LISTA */
 .react-tel-input .country-list .country.highlight {
     background-color: var(--white-color);
 }
@@ -123,6 +124,28 @@
 
 .react-tel-input .country-list .country .dial-code {
     color: var(--darkblue-color);
+}
+
+/* Ocultar bandera y dropdown al inicio */
+.phone-hidden .flag-dropdown {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.flag-dropdown {
+    transition: opacity 0.2s ease;
+}
+
+/* Hacer que el input tenga placeholder normal */
+.phone-hidden input {
+    padding-left: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Al hacer focus, mostrar la bandera */
+.phone-visible .flag-dropdown {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @media (min-width: 1700px) {

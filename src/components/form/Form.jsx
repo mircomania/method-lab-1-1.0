@@ -1,18 +1,23 @@
+import { useState, useMemo } from 'react';
+
 import styles from '../../styles/modules/form.module.css';
 
 import { useForm } from '../../hooks/UseForm';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import PhoneInput from 'react-phone-input-2';
-import { CustomSelect } from './CustomSelect';
+import { Spinner } from '../../assets/icons/Spinner';
 
+import PhoneInput from 'react-phone-input-2';
+
+import { CustomSelect } from './CustomSelect';
 import { tools } from './herramientasForm';
 import { equipos } from './equipoForm';
 
 export const Form = () => {
-    const equipoOptions = equipos.map((e) => ({ value: e, label: e }));
-    const toolsOptions = tools.map((e) => ({ value: e, label: e }));
+    const [showPhoneUI, setShowPhoneUI] = useState(false);
+
+    const equipoOptions = useMemo(() => equipos.map((e) => ({ value: e, label: e })), []);
+
+    const toolsOptions = useMemo(() => tools.map((e) => ({ value: e, label: e })), []);
 
     const { formData, errors, loading, handleChange, updateField, handleSubmit, showAlert } = useForm(
         {
@@ -24,25 +29,23 @@ export const Form = () => {
             equipo: '',
             tool: '',
         },
-        (success, data) => {
-            if (success) {
-                showAlert('Excelente', 'Datos enviados correctamente.<br>Pronto nos pondremos en contacto contigo.', 'success', '#7f8ac7');
-            } else {
-                showAlert('Ups', 'Hubo un error al enviar los datos.', 'error', '#ac3150');
-            }
-        }
+        {
+            onSuccess: () =>
+                showAlert('Excelente', 'Datos enviados correctamente.<br>Pronto nos pondremos en contacto contigo.', 'success', '#112c43'),
+            onError: () => showAlert('Ups', 'Hubo un error al enviar los datos.', 'error', '#ac3150'),
+        },
     );
 
     return (
         <form onSubmit={handleSubmit} className={styles.form} noValidate>
             {/* NOMBRE Y APELLIDO */}
-            <div className={styles.campoPrecalificarForm}>
+            <div className={styles.inputContainer}>
                 <label htmlFor="nombre" className={`light-text ${errors.nombre ? styles.labelError : ''}`} aria-label="Nombre del usuario">
                     Nombre y apellido
                 </label>
                 <input
                     type="text"
-                    className={styles.formControl}
+                    className={styles.input}
                     id="nombre"
                     name="nombre"
                     value={formData.nombre}
@@ -53,40 +56,43 @@ export const Form = () => {
             </div>
 
             {/* TELEFONO */}
-            <div className={styles.campoPrecalificarForm}>
+            <div className={styles.inputContainer}>
                 <label htmlFor="telefono" className={`light-text ${errors.telefono ? styles.labelError : ''}`}>
                     Teléfono
                 </label>
                 <PhoneInput
-                    country="mx"
-                    value={formData.telefono || ''}
+                    country={showPhoneUI ? 'mx' : null}
+                    value={formData.telefono}
+                    onFocus={() => {
+                        setShowPhoneUI(true);
+                    }}
                     onChange={(phone) => {
-                        const formatted = `+${phone}`;
+                        const formatted = phone ? `+${phone}` : '';
                         handleChange({ target: { name: 'telefono', value: formatted } });
                     }}
-                    inputClass={styles.formControl}
+                    inputClass={`${styles.input} ${errors.telefono ? styles.errorInput : ''}`}
+                    containerClass={showPhoneUI ? 'phone-visible' : 'phone-hidden'}
                     inputProps={{
                         name: 'telefono',
                         required: true,
                         autoComplete: 'tel',
                         id: 'telefono',
+                        placeholder: '',
                         'aria-invalid': !!errors.telefono,
                     }}
                     enableSearch
                     preferredCountries={['mx', 'us']}
-                    placeholder=""
-                    disablePlaceholder={true}
                 />
             </div>
 
             {/* EMAIL */}
-            <div className={styles.campoPrecalificarForm}>
+            <div className={styles.inputContainer}>
                 <label htmlFor="email" className={`light-text ${errors.email ? styles.labelError : ''}`} aria-label="email del usuario">
                     Correo electronico
                 </label>
                 <input
                     type="email"
-                    className={styles.formControl}
+                    className={styles.input}
                     id="email"
                     name="email"
                     value={formData.email}
@@ -99,13 +105,13 @@ export const Form = () => {
 
             <div className={styles.dobleInput}>
                 {/* EMPRESA */}
-                <div className={styles.campoPrecalificarForm}>
+                <div className={styles.inputContainer}>
                     <label htmlFor="empresa" className={`light-text ${errors.empresa ? styles.labelError : ''}`} aria-label="Nombre de la empresa">
                         Nombre de tu empresa
                     </label>
                     <input
                         type="text"
-                        className={styles.formControl}
+                        className={styles.input}
                         id="empresa"
                         name="empresa"
                         value={formData.empresa}
@@ -116,13 +122,13 @@ export const Form = () => {
                 </div>
 
                 {/* ROL */}
-                <div className={styles.campoPrecalificarForm}>
+                <div className={styles.inputContainer}>
                     <label htmlFor="rol" className={`light-text ${errors.rol ? styles.labelError : ''}`} aria-label="Que rol tienes en la empresa">
                         Tu rol en la empresa
                     </label>
                     <input
                         type="text"
-                        className={styles.formControl}
+                        className={styles.input}
                         id="rol"
                         name="rol"
                         value={formData.rol}
@@ -141,7 +147,7 @@ export const Form = () => {
                     value={formData.equipo}
                     onChange={updateField}
                     error={errors.equipo}
-                    placeholder="Selecciona una cantidad"
+                    placeholder=""
                 />
 
                 {/* TOOL */}
@@ -152,15 +158,14 @@ export const Form = () => {
                     value={formData.tool}
                     onChange={updateField}
                     error={errors.tool}
-                    placeholder="Selecciona una opción"
+                    placeholder=""
                 />
             </div>
 
             {/* BOTON ENVIAR */}
             <div className={styles.contentEnvio}>
                 <button type="submit" className="boton-2 light-text" disabled={loading}>
-                    <span style={{ visibility: loading ? 'hidden' : 'visible' }}>ENVIAR.</span>
-                    {loading && <FontAwesomeIcon icon={faSpinner} spin style={{ position: 'absolute' }} />}
+                    {loading ? <Spinner size={22} color="var(--darkblue-color)" strokeWidth={3} speed={1} /> : 'ENVIAR.'}
                 </button>
             </div>
 

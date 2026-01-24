@@ -1,59 +1,59 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .sectionContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: top;
+    justify-content: center;
     overflow: hidden;
     background-color: var(--blue-color);
-    min-height: 600px;
-    padding: 40px 0;
-}
-
-.contenidoAdicional1 {
-    margin-top: 280px;
-}
-
-.contenidoAdicional2 {
-    margin-top: 180px;
-}
-
-.sectionTitulo {
-    color: var(--white-color);
-    margin-bottom: 20px;
-    width: 360px;
-}
-
-.sectionTitulo h2 {
-    font-size: 18px;
-}
-
-.sectionContenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-
-.sectionComentarios {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
     gap: 20px;
 }
 
+.sectionContainer header h2 {
+    color: var(--white-color);
+    width: 360px;
+    font-size: 18px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: max-content;
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
 .comentario {
+    display: block;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     background-color: var(--white-color);
     gap: 20px;
     padding: 0 20px;
-    padding-top: 20px;
-    width: 300px;
-    height: 250px;
+    padding-top: 30px;
+    margin: 0 10px;
+    width: 350px;
+    height: 320px;
 }
 
 .comentarioPersona {
@@ -61,6 +61,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+}
+
+.comentarioPersona img {
+    border-radius: 50%;
+    width: 100px;
 }
 
 .comentarioDatos {
@@ -73,7 +79,7 @@
 
 .comentarioDatos h3 {
     line-height: 1.1;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .comentarioDatos h4 {
@@ -84,13 +90,68 @@
 .comentario p {
     color: var(--darkblue-color);
     line-height: 1.2;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.sectionLogos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+@media (min-width: 768px) {
+    .sectionContainer header h2 {
+        width: 640px;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sectionContainer header h2 {
+        width: 760px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionContainer {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        gap: 20px;
+    }
+
+    .sectionContainer header h2 {
+        width: 950px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .sectionContainer header h2 {
+        font-size: 28px;
+    }
+
+    .comentario {
+        padding-top: 50px;
+        width: 420px;
+        height: 380px;
+    }
+
+    .comentarioPersona {
+        gap: 20px;
+    }
+
+    .comentarioPersona img {
+        width: 120px;
+    }
+
+    .comentarioDatos h3 {
+        font-size: 22px;
+    }
+
+    .comentarioDatos h4 {
+        font-size: 20px;
+    }
+
+    .comentario p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sectionContainer header h2 {
+        width: 1250px;
+    }
 }

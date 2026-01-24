@@ -1,0 +1,23 @@
+.select-scope {
+    --select-font: 16px;
+    --select-height: 30px;
+    --select-width: 340px;
+    --menu-border: 15px 15px 10px 10px;
+    --option-padding: 4px 12px;
+}
+
+@media (min-width: 1200px) {
+    .select-scope {
+        --select-width: 300px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .select-scope {
+        --select-height: 38px;
+        --select-font: 18px;
+        --select-width: 340px;
+        --menu-border: 20px 20px 10px 10px;
+        --option-padding: 6px 12px;
+    }
+}
