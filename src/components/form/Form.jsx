@@ -70,7 +70,7 @@ export const Form = () => {
                         const formatted = phone ? `+${phone}` : '';
                         handleChange({ target: { name: 'telefono', value: formatted } });
                     }}
-                    inputClass={`${styles.input} ${errors.telefono ? styles.errorInput : ''}`}
+                    inputClass={styles.input}
                     containerClass={showPhoneUI ? 'phone-visible' : 'phone-hidden'}
                     inputProps={{
                         name: 'telefono',

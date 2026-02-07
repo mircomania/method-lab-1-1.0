@@ -73,6 +73,19 @@ export const BurgerMenu = () => {
         };
     }, [isOpen]);
 
+    /* BLOQUEAR EL SCROLL DEL BODY */
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     return (
         <div className="burger-menu" ref={menuRef}>
             {/* ICONO */}

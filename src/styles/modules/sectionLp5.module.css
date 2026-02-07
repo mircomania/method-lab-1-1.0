@@ -220,58 +220,123 @@
         height: 190px;
     }
 
+    /* CONT 1 */
     .cont1 img {
         width: 250px;
+        transition: transform 0.4s ease;
+    }
+    .cont1:hover img {
+        transform: scale(1.08);
     }
 
+    /* CONT 2 */
     .cont2 {
         background-size: auto 190px;
+        transition: background-size 0.4s ease;
+    }
+    .cont2:hover {
+        background-size: auto 200px;
     }
 
+    /* CONT 3 */
     .cont3 img {
         width: 160px;
+        transition: transform 0.4s ease;
+    }
+    .cont3:hover img {
+        transform: scale(1.07);
     }
 
+    /* CONT 4 */
     .cont4 img {
         width: 140px;
+        transition: transform 0.4s ease;
+    }
+    .cont4:hover img {
+        transform: scale(1.07);
     }
 
+    /* CONT 5 */
     .cont5 p {
         margin-left: 15px;
         font-size: 16px;
+        transition: font-size 0.3s ease;
+    }
+    .cont5:hover p {
+        font-size: 18px;
     }
 
+    /* CONT 6 */
     .cont6 p {
         font-size: 16px;
+        transition: font-size 0.3s ease;
+    }
+    .cont6:hover p {
+        font-size: 18px;
     }
 
+    /* CONT 7 */
     .cont7 img {
         height: 160px;
+        transition: transform 0.4s ease;
+    }
+    .cont7:hover img {
+        transform: scale(1.07);
     }
 
+    /* CONT 8 */
     .cont8 p {
         font-size: 16px;
+        transition: font-size 0.3s ease;
+    }
+    .cont8:hover p {
+        font-size: 18px;
     }
 
+    /* CONT 9 */
     .cont9 p {
         font-size: 16px;
+        transition: font-size 0.3s ease;
+    }
+    .cont9:hover p {
+        font-size: 18px;
     }
 
+    /* CONT 10 */
     .cont10 img {
         width: 133px;
+        transition: transform 0.4s ease;
+    }
+    .cont10:hover img {
+        transform: scale(1.07);
     }
 
+    /* CONT 11 */
     .cont11 p {
         font-size: 16px;
+        transition: font-size 0.3s ease;
+    }
+    .cont11:hover p {
+        font-size: 18px;
     }
 
+    /* CONT 12 */
     .cont12 img {
         width: 170px;
         margin-top: 25px;
+        transition: transform 0.4s ease;
+    }
+    .cont12:hover img {
+        transform: scale(1.07);
     }
 
+    /* CONT 13 */
     .cont13 img {
         width: 120px;
+        transition: transform 0.4s ease;
+    }
+    .cont13:hover img {
+        transform: scale(1.07);
     }
 }
 
@@ -302,6 +367,10 @@
         background-size: auto 255px;
     }
 
+    .cont2:hover {
+        background-size: auto 265px;
+    }
+
     .cont3 img {
         width: 220px;
     }
@@ -316,8 +385,16 @@
         margin-left: 25px;
     }
 
+    .cont5:hover p {
+        font-size: 22px;
+    }
+
     .cont6 p {
         font-size: 20px;
+    }
+
+    .cont6:hover p {
+        font-size: 22px;
     }
 
     .cont7 {
@@ -332,8 +409,16 @@
         font-size: 20px;
     }
 
+    .cont8:hover p {
+        font-size: 22px;
+    }
+
     .cont9 p {
         font-size: 20px;
+    }
+
+    .cont9:hover p {
+        font-size: 22px;
     }
 
     .cont10 img {
@@ -342,6 +427,10 @@
 
     .cont11 p {
         font-size: 20px;
+    }
+
+    .cont11:hover p {
+        font-size: 22px;
     }
 
     .cont12 img {

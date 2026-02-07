@@ -1,10 +1,13 @@
+import { useEffect, useRef } from 'react';
+
 import styles from '../../styles/modules/sectionLp7.module.css';
 
 import { Comentarios } from '../utils/Comentarios';
-
-import { useEffect, useRef } from 'react';
+import { ScrollReveal } from '../utils/ScrollReveal';
+import { useMediaQuery } from '../../hooks/UseMediaQuery';
 
 export const SectionLp7 = () => {
+    const isMobile = useMediaQuery('(max-width: 1199px)');
     const comentarios = [...Comentarios, ...Comentarios];
     const trackRef = useRef(null);
 
@@ -21,9 +24,11 @@ export const SectionLp7 = () => {
 
     return (
         <section className={styles.sectionContainer}>
-            <header>
-                <h2 className="light-text">Ellos ya encontraron su método.</h2>
-            </header>
+            <ScrollReveal mode="clone" from="right" distance={30} duration={0.3} disabled={isMobile} threshold={0.6}>
+                <header>
+                    <h2 className="light-text">Ellos ya encontraron su método.</h2>
+                </header>
+            </ScrollReveal>
 
             <div className={styles.slider}>
                 <div ref={trackRef} className={styles.track}>

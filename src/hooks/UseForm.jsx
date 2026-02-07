@@ -199,8 +199,6 @@ export const useForm = (initialState, { onSuccess = () => {}, onError = () => {}
         setFormData({
             ...initialState,
             telefono: '+52',
-            equipo: '',
-            tool: '',
         });
         setErrors({});
     };

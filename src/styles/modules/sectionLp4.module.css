@@ -109,12 +109,12 @@
     top: 0;
     bottom: 0;
     width: 360px;
-    right: -120px;
+    right: -110px;
 }
 
 .iconosContainer img {
-    pointer-events: none;
-    width: 240px;
+    pointer-events: auto;
+    width: 220px;
 }
 
 @media (min-width: 768px) {
@@ -144,6 +144,17 @@
         height: 0;
         border-top: 2px dashed var(--darkblue-color);
         z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+        transition:
+            transform 3s ease-out,
+            opacity 2s ease-out;
+    }
+
+    [data-visible='true'] .titulosContainer::before {
+        transform: scaleX(1);
+        opacity: 1;
     }
 
     .sectionTitulo h2 {
@@ -215,6 +226,64 @@
     .icono5 {
         position: relative;
         left: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionContenido {
+        --active-group: 0;
+    }
+
+    .sectionContenido:has([data-group='1']:hover) {
+        --active-group: 1;
+    }
+    .sectionContenido:has([data-group='2']:hover) {
+        --active-group: 2;
+    }
+    .sectionContenido:has([data-group='3']:hover) {
+        --active-group: 3;
+    }
+    .sectionContenido:has([data-group='4']:hover) {
+        --active-group: 4;
+    }
+    .sectionContenido:has([data-group='5']:hover) {
+        --active-group: 5;
+    }
+
+    .iconosContainer img,
+    .listaItem {
+        --is-active: 0;
+        transition: transform 0.4s ease;
+    }
+
+    .sectionContenido {
+        --active-group: 0;
+    }
+
+    .plusContainer {
+        transition: transform 0.4s ease;
+    }
+
+    .sectionContenido:has([data-group='5']:hover) .plusContainer {
+        transform: scale(1.1);
+    }
+
+    /* Iconos */
+    .sectionContenido:has([data-group='1']:hover) .iconosContainer [data-group='1'],
+    .sectionContenido:has([data-group='2']:hover) .iconosContainer [data-group='2'],
+    .sectionContenido:has([data-group='3']:hover) .iconosContainer [data-group='3'],
+    .sectionContenido:has([data-group='4']:hover) .iconosContainer [data-group='4'],
+    .sectionContenido:has([data-group='5']:hover) .iconosContainer [data-group='5'] {
+        transform: scale(1.15);
+    }
+
+    /* Lista */
+    .sectionContenido:has([data-group='1']:hover) .listaItem1,
+    .sectionContenido:has([data-group='2']:hover) .listaItem2,
+    .sectionContenido:has([data-group='3']:hover) .listaItem3,
+    .sectionContenido:has([data-group='4']:hover) .listaItem4,
+    .sectionContenido:has([data-group='5']:hover) .listaItem5 {
+        transform: scale(1.05);
     }
 }
 

@@ -7,7 +7,12 @@ import img5 from '../../assets/images/figura-5.png';
 
 import { Form } from '../form/Form';
 
+import { ScrollReveal } from '../utils/ScrollReveal';
+import { useMediaQuery } from '../../hooks/UseMediaQuery';
+
 export const SectionLp8 = () => {
+    const isMobile = useMediaQuery('(max-width: 1199px)');
+
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.corteSection}></div>
@@ -15,9 +20,11 @@ export const SectionLp8 = () => {
             <div className={styles.sectionContenido}>
                 <div className={styles.contenido}>
                     <div className={styles.sectionText}>
-                        <header className={styles.sectionTitulo}>
-                            <h2 className="bold-text">Diseñemos tu método.</h2>
-                        </header>
+                        <ScrollReveal mode="clone" from="left" distance={30} duration={0.3} disabled={isMobile} threshold={0.2}>
+                            <header className={styles.sectionTitulo}>
+                                <h2 className="bold-text">Diseñemos tu método.</h2>
+                            </header>
+                        </ScrollReveal>
 
                         <p className="light-text">
                             ¿Listo para trabajar con orden, foco y resultados? Tu negocio no necesita más esfuerzo, necesita estructura.
