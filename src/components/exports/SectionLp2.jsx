@@ -2,14 +2,11 @@ import styles from '../../styles/modules/sectionLp2.module.css';
 
 import { BotonNav } from '../utils/BotonNav';
 import { ScrollReveal } from '../utils/ScrollReveal';
-import { useMediaQuery } from '../../hooks/UseMediaQuery';
 
 export const SectionLp2 = () => {
-    const isMobile = useMediaQuery('(max-width: 1199px)');
-
     return (
         <section className={styles.sectionContainer}>
-            <ScrollReveal mode="clone" from="bottom" distance={0} duration={0.3} disabled={isMobile} threshold={0.2}>
+            <ScrollReveal mode="clone" from="bottom" distance={30} duration={0.3} threshold={0.6}>
                 <header className={styles.sectionTitulo}>
                     <h2 className="light-text">
                         En{' '}
@@ -22,7 +19,7 @@ export const SectionLp2 = () => {
                 </header>
             </ScrollReveal>
 
-            <ScrollReveal mode="clone" from="bottom" distance={0} duration={0.3} disabled={isMobile} threshold={0.2}>
+            <ScrollReveal mode="clone" from="bottom" distance={30} duration={0.3} threshold={0.5}>
                 <div>
                     <BotonNav dataCta="home-btn-2">DISEÑEMOS TU MÉTODO.</BotonNav>
                 </div>

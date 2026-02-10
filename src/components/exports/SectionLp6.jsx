@@ -11,7 +11,7 @@ export const SectionLp6 = () => {
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.sectionContenido}>
-                <ScrollReveal mode="clone" from="right" distance={30} duration={0.3} disabled={isMobile} threshold={0.2}>
+                <ScrollReveal mode="clone" from={isMobile ? 'bottom' : 'right'} distance={30} duration={0.3} threshold={0.6}>
                     <div className={styles.cont1}>
                         <header className={styles.sectionTitulo}>
                             <h2 className="bold-text">
@@ -35,7 +35,7 @@ export const SectionLp6 = () => {
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal mode="clone" from="left" distance={30} duration={0.3} disabled={isMobile} threshold={0.2}>
+                <ScrollReveal mode="clone" from={isMobile ? 'bottom' : 'left'} distance={30} duration={0.3} threshold={0.1}>
                     <div className={styles.cont2}>
                         <img src={imgSection} alt="" />
 

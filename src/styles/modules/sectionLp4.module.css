@@ -109,12 +109,12 @@
     top: 0;
     bottom: 0;
     width: 360px;
-    right: -110px;
+    right: -120px;
 }
 
 .iconosContainer img {
-    pointer-events: auto;
-    width: 220px;
+    pointer-events: none;
+    width: 240px;
 }
 
 @media (min-width: 768px) {

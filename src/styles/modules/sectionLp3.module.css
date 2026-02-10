@@ -6,7 +6,8 @@
     position: relative;
     overflow: hidden;
     background-color: var(--darkblue-color);
-    padding: 170px 20px;
+    padding: 160px 20px;
+    padding-top: 150px;
 }
 
 .sectionTitulo {

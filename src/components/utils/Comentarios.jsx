@@ -2,13 +2,14 @@ import img1 from '../../assets/images/img-section-lp-7-1.png';
 import img2 from '../../assets/images/img-section-lp-7-2.png';
 import img3 from '../../assets/images/img-section-lp-7-3.png';
 import img4 from '../../assets/images/img-section-lp-7-4.png';
+import img5 from '../../assets/images/img-section-lp-7-5.png';
 
 export const Comentarios = [
     {
         id: '1',
         nombre: 'Carlos Zapata',
         empresa: 'Foodie Gurú',
-        texto: '"Con David y su Team mi despacho ampliamos nuestra oferta de productos. Todo automatizado, clientes al día y casos de éxito documentados."',
+        texto: '"Con David y su Team ampliamos nuestra oferta de productos. Todo automatizado, clientes al día y casos de éxito documentados. Súper recomendado."',
         img: img1,
     },
     {
@@ -31,5 +32,12 @@ export const Comentarios = [
         empresa: 'Armazón Constructora',
         texto: '"Gracias a Method Lab hoy tenemos visibilidad de la operación, del equipo y de las finanzas, lo que nos permite tomar mejores decisiones."',
         img: img4,
+    },
+    {
+        id: '5',
+        nombre: 'Jorge Diez',
+        empresa: 'Pendiente',
+        texto: '"Gracias a Method Lab llevamos un control muy sencillo de nuestros inventario de libros a través de monday. Esto nos ayuda a mantenernos organizados y al día."',
+        img: img5,
     },
 ];

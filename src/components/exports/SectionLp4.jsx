@@ -22,7 +22,7 @@ export const SectionLp4 = () => {
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.sectionContenido}>
-                <ScrollReveal mode="wrap" from="left" disabled={isMobile} threshold={0.2}>
+                <ScrollReveal mode="wrap" from="left" threshold={0.2}>
                     <div ref={lineRef} className={styles.titulosContainer}>
                         <header className={`${styles.sectionTitulo} ${styles.lineTrigger}`}>
                             <h2 className="light-text">
@@ -32,7 +32,7 @@ export const SectionLp4 = () => {
 
                         <div className={styles.listaContainer}>
                             {catsSectionLp4.map(({ id, titulo, texto, duration }, index) => (
-                                <ScrollReveal mode="wrap" key={id} from="left" distance={50} duration={duration} disabled={isMobile} threshold={0.2}>
+                                <ScrollReveal mode="wrap" key={id} from="left" distance={50} duration={duration} threshold={0.2}>
                                     <div key={id} className={`${styles.listaItem} ${styles[`listaItem${index + 1}`]}`} data-group={index + 1}>
                                         <span className="bold-text" style={{ color: colors[index] }}>
                                             {id}
@@ -52,19 +52,19 @@ export const SectionLp4 = () => {
                 </ScrollReveal>
 
                 <div className={styles.iconosContainer}>
-                    <ScrollReveal mode="wrap" from="left" distance={50} duration={0.3} disabled={isMobile} threshold={0.2}>
+                    <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
                         <img src={icono1} alt="" className={styles.icono1} data-group="1" />
                     </ScrollReveal>
-                    <ScrollReveal mode="wrap" from="left" distance={50} duration={0.3} disabled={isMobile} threshold={0.2}>
+                    <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
                         <img src={icono2} alt="" className={styles.icono2} data-group="2" />
                     </ScrollReveal>
-                    <ScrollReveal mode="wrap" from="left" distance={50} duration={0.3} disabled={isMobile} threshold={0.2}>
+                    <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
                         <img src={icono3} alt="" className={styles.icono3} data-group="3" />
                     </ScrollReveal>
-                    <ScrollReveal mode="wrap" from="left" distance={50} duration={0.3} disabled={isMobile} threshold={0.2}>
+                    <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
                         <img src={icono4} alt="" className={styles.icono4} data-group="4" />
                     </ScrollReveal>
-                    <ScrollReveal mode="wrap" from="left" distance={50} duration={0.3} disabled={isMobile} threshold={0.2}>
+                    <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
                         <img src={icono5} alt="" className={styles.icono5} data-group="5" />
                     </ScrollReveal>
                 </div>
