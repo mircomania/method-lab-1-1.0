@@ -40,26 +40,28 @@ const LandingPage = () => {
 
             <SectionLp2 />
 
-            <section id="servicios">
+            <section id="servicios" className="stack">
                 <SectionLp3 />
             </section>
 
-            <section id="metodologia">
+            <section id="metodologia" className="stack">
                 <SectionLp4 />
             </section>
 
-            <section id="monday">
+            <section id="monday" className="stack">
                 <SectionLp5 />
             </section>
 
-            <section id="nosotros">
+            <section id="nosotros" className="stack">
                 <SectionLp6 />
             </section>
 
-            <SectionLp7 />
+            <section className="stack">
+                <SectionLp7 />
 
-            <section id="contacto">
-                <SectionLp8 />
+                <section id="contacto">
+                    <SectionLp8 />
+                </section>
             </section>
         </main>
     );
