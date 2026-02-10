@@ -28,24 +28,26 @@ export const SectionLp7 = () => {
                 </header>
             </ScrollReveal>
 
-            <div className={styles.slider}>
-                <div ref={trackRef} className={styles.track}>
-                    {comentarios.map((comentario, i) => (
-                        <div key={i} className={styles.comentario}>
-                            <div className={styles.comentarioPersona}>
-                                <img src={comentario.img} alt={comentario.nombre} />
+            <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.3}>
+                <div className={styles.slider}>
+                    <div ref={trackRef} className={styles.track}>
+                        {comentarios.map((comentario, i) => (
+                            <div key={i} className={styles.comentario}>
+                                <div className={styles.comentarioPersona}>
+                                    <img src={comentario.img} alt={comentario.nombre} />
 
-                                <div className={styles.comentarioDatos}>
-                                    <h3 className="bold-text">{comentario.nombre}</h3>
-                                    <h4 className="light-text">{comentario.empresa}</h4>
+                                    <div className={styles.comentarioDatos}>
+                                        <h3 className="bold-text">{comentario.nombre}</h3>
+                                        <h4 className="light-text">{comentario.empresa}</h4>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <p className="light-text">{comentario.texto}</p>
-                        </div>
-                    ))}
+                                <p className="light-text">{comentario.texto}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </ScrollReveal>
         </section>
     );
 };

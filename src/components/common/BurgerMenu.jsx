@@ -3,7 +3,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { BurgerIcon } from '../utils/BurgerIcon';
 
-import LogoBurger from '../../assets/images/logo-black.png';
+import logo from '../../assets/images/logo-black.png';
 
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -131,7 +131,7 @@ export const BurgerMenu = () => {
                     {/* LOGO  */}
 
                     <div className="logo-mobile-menu">
-                        <img src={LogoBurger} alt="Logotipo de Method Lab" loading="lazy" decoding="async" />
+                        <img src={logo} alt="Logotipo de Method Lab" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>

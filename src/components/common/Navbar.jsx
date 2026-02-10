@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import LogoNavbar from '../../assets/images/logo-figuras-black.png';
+import logo from '../../assets/images/logo-figuras-black.png';
 
 import { useMediaQuery } from '../../hooks/UseMediaQuery';
 import { BurgerMenu } from './BurgerMenu';
@@ -64,7 +64,7 @@ export const Navbar = () => {
 
                 <div className="logo-container">
                     <a href="/" aria-label="Ir a la página principal" data-link="navbar-logo-btn" onClick={handleLogoClick}>
-                        <img src={LogoNavbar} alt="Logotipo de Method Lab en la barra de navegación" className="logo-navbar" />
+                        <img src={logo} alt="Logotipo de Method Lab en la barra de navegación" className="logo-navbar" />
                     </a>
                 </div>
 

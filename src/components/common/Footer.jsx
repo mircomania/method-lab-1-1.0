@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import LogoFooter from '../../assets/images/logo-figuras-black.png';
+import logo from '../../assets/images/logo-figuras-black.png';
 
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -89,7 +89,7 @@ export const Footer = () => {
                     {/* LOGO  */}
                     <div className="logo-footer">
                         <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
-                            <img src={LogoFooter} alt="Logotipo de MethodLab en el pie de página" />
+                            <img src={logo} alt="Logotipo de MethodLab en el pie de página" />
                         </a>
                     </div>
 
@@ -124,6 +124,18 @@ export const Footer = () => {
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div className="utils-footer light-text">
+                <p>All right reserved.</p>
+
+                <NavLink to="/politica-privacidad" title="Ver la política de privacidad" data-link="footer-politica-link">
+                    Politica de Privacidad
+                </NavLink>
+
+                <NavLink to="/politica-privacidad" title="Ver las preguntas preguntas frecuentes" data-link="footer-faq-link">
+                    FAQ
+                </NavLink>
             </div>
         </footer>
     );
