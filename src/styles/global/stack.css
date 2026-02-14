@@ -1,12 +1,42 @@
 .stack {
-    position: sticky;
-    top: var(--navbar-height, 0px);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    top: auto;
 }
 
 .stack + .stack {
-    z-index: 2;
+    z-index: auto;
 }
 .stack + .stack + .stack {
-    z-index: 3;
+    z-index: auto;
+}
+
+@media (min-width: 1200px) {
+    .stack {
+        position: sticky;
+        top: var(--navbar-height, 0px);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stack + .stack {
+        z-index: 2;
+    }
+    .stack + .stack + .stack {
+        z-index: 3;
+    }
+}
+
+@media (max-width: 574px) {
+    .stack--servicios,
+    .stack--nosotros,
+    .stack--monday {
+        position: sticky;
+        top: var(--navbar-height, 0px);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stack--servicios + .stack,
+    .stack--nosotros + .stack,
+    .stack--monday + .stack {
+        z-index: 2;
+    }
 }

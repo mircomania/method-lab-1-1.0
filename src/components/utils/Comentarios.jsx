@@ -3,6 +3,8 @@ import img2 from '../../assets/images/img-section-lp-7-2.png';
 import img3 from '../../assets/images/img-section-lp-7-3.png';
 import img4 from '../../assets/images/img-section-lp-7-4.png';
 import img5 from '../../assets/images/img-section-lp-7-5.png';
+import img6 from '../../assets/images/img-section-lp-7-6.png';
+import img7 from '../../assets/images/img-section-lp-7-7.png';
 
 export const Comentarios = [
     {
@@ -35,9 +37,23 @@ export const Comentarios = [
     },
     {
         id: '5',
-        nombre: 'Jorge Diez',
-        empresa: 'Pendiente',
-        texto: '"Gracias a Method Lab llevamos un control muy sencillo de nuestros inventario de libros a través de monday. Esto nos ayuda a mantenernos organizados y al día."',
+        nombre: 'Michelle Tribouillier',
+        empresa: 'Librería Meñique',
+        texto: '"Gracias a Method Lab llevamos un control muy sencillo de nuestro inventario de libros a través de monday. Esto nos ayuda a mantenernos organizados y al día."',
         img: img5,
+    },
+    {
+        id: '6',
+        nombre: 'Sergio Guevara',
+        empresa: 'La Qbeta',
+        texto: '"Estoy muy contento con Method Lab porque gracias a su trabajo ahora tenemos claridad y organización de todo lo que realizamos. Pudimos darle solución a las fallas que presentábamos y optimizar nuestro desempeño. ¡Muy recomendado!"',
+        img: img6,
+    },
+    {
+        id: '7',
+        nombre: 'Julio Flores',
+        empresa: 'Trebol Motors',
+        texto: '"Antes teníamos claridad en la visión, pero no en la estructura. Con Method Lab logramos ordenar procesos de forma práctica y aterrizada, sin complicaciones innecesarias. Hoy el equipo tiene mucho más control y cada quien sabe exactamente qué hacer y cómo hacerlo. El acompañamiento de David y su equipo fue clave. Súper recomendado."',
+        img: img7,
     },
 ];

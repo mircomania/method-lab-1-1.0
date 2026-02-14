@@ -27,17 +27,39 @@ export const Footer = () => {
 
         // ————— Anclas dentro de landing —————
         if (item.to.startsWith('#')) {
+            const hash = item.to;
+            const isContacto = hash === '#contacto';
+
             if (location.pathname === '/') {
-                const targetEl = document.querySelector(item.to);
-                if (targetEl) {
+                const targetEl = document.querySelector(hash);
+                if (!targetEl) return;
+
+                //CONTACTO
+                if (isContacto) {
                     window.scrollTo({
                         top: targetEl.offsetTop,
                         behavior: 'smooth',
                     });
                 }
+                //STACK SECTIONS
+                else {
+                    window.scrollTo({ top: 0, behavior: 'auto' });
+
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            const y = targetEl.getBoundingClientRect().top + window.pageYOffset;
+
+                            window.scrollTo({
+                                top: y,
+                                behavior: 'smooth',
+                            });
+                        });
+                    });
+                }
             } else {
-                navigate(`/${item.to}`);
+                navigate(`/${hash}`);
             }
+
             return;
         }
 
@@ -133,7 +155,7 @@ export const Footer = () => {
                     Politica de Privacidad
                 </NavLink>
 
-                <NavLink to="/politica-privacidad" title="Ver las preguntas preguntas frecuentes" data-link="footer-faq-link">
+                <NavLink to="/faq" title="Ver las preguntas preguntas frecuentes" data-link="footer-faq-link">
                     FAQ
                 </NavLink>
             </div>

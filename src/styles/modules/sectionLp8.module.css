@@ -40,6 +40,7 @@
 
 .sectionContainer {
     position: relative;
+    z-index: 3;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -189,6 +190,12 @@
     .sectionForm {
         width: 340px;
         margin: 0px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenido {
+        gap: 150px;
     }
 }
 

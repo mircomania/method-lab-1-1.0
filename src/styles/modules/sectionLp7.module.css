@@ -8,6 +8,8 @@
 }
 
 .sectionContainer {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +55,7 @@
     padding-top: 30px;
     margin: 0 10px;
     width: 350px;
-    height: 320px;
+    height: 360px;
 }
 
 .comentarioPersona {
@@ -126,7 +128,7 @@
     .comentario {
         padding-top: 50px;
         width: 420px;
-        height: 380px;
+        height: 400px;
     }
 
     .comentarioPersona {

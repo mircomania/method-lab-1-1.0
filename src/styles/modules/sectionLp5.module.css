@@ -201,7 +201,146 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
+    .sectionContainer {
+        padding: 80px 0;
+    }
+
+    .sectionContenido {
+        width: 800px;
+    }
+
+    .dobleWrap {
+        width: 300px;
+        height: 150px;
+    }
+
+    .singleWrap {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* CONT 1 */
+    .cont1 img {
+        width: 200px;
+        transition: transform 0.4s ease;
+    }
+    .cont1:hover img {
+        transform: scale(1.08);
+    }
+
+    /* CONT 2 */
+    .cont2 {
+        background-size: auto 150px;
+        transition: background-size 0.4s ease;
+    }
+    .cont2:hover {
+        background-size: auto 160px;
+    }
+
+    /* CONT 3 */
+    .cont3 img {
+        width: 120px;
+        transition: transform 0.4s ease;
+    }
+    .cont3:hover img {
+        transform: scale(1.07);
+    }
+
+    /* CONT 4 */
+    .cont4 img {
+        width: 100px;
+        transition: transform 0.4s ease;
+    }
+    .cont4:hover img {
+        transform: scale(1.07);
+    }
+
+    /* CONT 5 */
+    .cont5 p {
+        margin-left: 15px;
+        font-size: 14px;
+        transition: font-size 0.3s ease;
+    }
+    .cont5:hover p {
+        font-size: 16px;
+    }
+
+    /* CONT 6 */
+    .cont6 p {
+        font-size: 14px;
+        transition: font-size 0.3s ease;
+    }
+    .cont6:hover p {
+        font-size: 16px;
+    }
+
+    /* CONT 7 */
+    .cont7 img {
+        height: 130px;
+        transition: transform 0.4s ease;
+    }
+    .cont7:hover img {
+        transform: scale(1.07);
+    }
+
+    /* CONT 8 */
+    .cont8 p {
+        font-size: 14px;
+        transition: font-size 0.3s ease;
+    }
+    .cont8:hover p {
+        font-size: 16px;
+    }
+
+    /* CONT 9 */
+    .cont9 p {
+        font-size: 14px;
+        transition: font-size 0.3s ease;
+    }
+    .cont9:hover p {
+        font-size: 16px;
+    }
+
+    /* CONT 10 */
+    .cont10 img {
+        width: 104px;
+        transition: transform 0.4s ease;
+    }
+    .cont10:hover img {
+        transform: scale(1.07);
+    }
+
+    /* CONT 11 */
+    .cont11 p {
+        font-size: 14px;
+        transition: font-size 0.3s ease;
+    }
+    .cont11:hover p {
+        font-size: 16px;
+    }
+
+    /* CONT 12 */
+    .cont12 img {
+        width: 130px;
+        margin-top: 25px;
+        transition: transform 0.4s ease;
+    }
+    .cont12:hover img {
+        transform: scale(1.07);
+    }
+
+    /* CONT 13 */
+    .cont13 img {
+        width: 100px;
+        transition: transform 0.4s ease;
+    }
+    .cont13:hover img {
+        transform: scale(1.07);
+    }
+}
+
+@media (min-width: 1400px) {
     .sectionContainer {
         padding: 80px 0;
     }

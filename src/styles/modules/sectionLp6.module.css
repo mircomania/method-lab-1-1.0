@@ -88,8 +88,8 @@
 
 @media (min-width: 992px) {
     .sectionContainer {
-        padding-top: 40px;
-        padding-bottom: 90px;
+        padding-top: 80px;
+        padding-bottom: 130px;
     }
 
     .cont1 {
@@ -97,7 +97,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .sectionContainer {
         padding-top: 80px;
         padding-bottom: 130px;
