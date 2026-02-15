@@ -2,15 +2,13 @@ export const faqData = [
     {
         id: 1,
         question: '¿Qué precio tienen sus servicios?',
-        answer: `Trabajamos con proyectos de implementación completos, no con “horas sueltas”.
-Nuestros servicios se cotizan según el tamaño del equipo, la complejidad operativa y el alcance del proyecto.\n
+        answer: `Trabajamos con proyectos de implementación completos, no con “horas sueltas”. Nuestros servicios se cotizan según el tamaño del equipo, la complejidad operativa y el alcance del proyecto.\n
 Generalmente incluyen:\n
 - Diagnóstico organizacional\n
 - Mapeo de procesos\n
 - Implementación personalizada en [monday.com](https://monday.com)\n
 - Capacitación y acompañamiento\n
-Los proyectos suelen estar en un rango aproximado de $100,000 a $250,000 MXN, más una póliza mensual opcional de acompañamiento.
-Siempre entregamos propuesta formal con alcance, etapas, entrañables y costos claros.
+Los proyectos suelen estar en un rango aproximado de $100,000 a $250,000 MXN, más una póliza mensual opcional de acompañamiento. Siempre entregamos propuesta formal con alcance, etapas, entrañables y costos claros.
 `,
     },
 
@@ -54,15 +52,14 @@ La tecnología es el medio, no el fin.
     {
         id: 5,
         question: '¿Qué los hace diferentes a otras consultoras?',
-        answer: `No vendemos teoría ni presentaciones bonitas.\n
-Nos metemos a:\n
+        answer: `Nos metemos a:\n
 - Entender cómo trabaja cada persona\n
 - Mapear procesos reales\n
 - Diseñar soluciones simplificadas hechas a la medida y fácil de cumplir\n
 - Configurar la herramienta por ustedes\n
 Entregamos sistemas listos para usarse de una manera muy sencilla y práctica.\n
 Nuestro enfoque es:\n
-claridad → orden → productividad → tranquilidad
+claridad > orden > productividad > tranquilidad
 `,
     },
 
@@ -88,7 +85,8 @@ Contamos con una póliza mensual de Customer Success que incluye:\n
 - Soporte al equipo\n
 - Reportes de uso\n
 - Acompañamiento estratégico\n
-La idea no es solo instalar y entregar, sino ser un acompañante premium durante la evolución de la operación de tu empresa.
+La idea no es solo instalar y entregar, sino ser un acompañante premium durante la evolución de la operación de tu empresa,
+así aseguramos el cumplimiento de las nuevas dinámicas.
 `,
     },
 
@@ -144,11 +142,12 @@ Es parte elemental y no negociable el mantener claridad total desde el inicio co
         id: 12,
         question: '¿Cómo sé si Method Lab es para mi empresa?',
         answer: `Probablemente somos buena opción si:\n
+- Usas demasiado WhatsApp para temas laborales\n
 - Tu operación depende de personas “clave” y no de procesos\n
 - Hay retrabajos, urgencias o incendios diarios\n
 - Falta visibilidad de tareas, proyectos o números\n
 - Tienes información diversificada en distintos lugares\n
-- Quieres crecer sin caos\n
+- El “control” de tu empresa habita en hojas de Excel aisladas\n
 Si buscas orden, claridad y control… estás en el lugar correcto.
 `,
     },
