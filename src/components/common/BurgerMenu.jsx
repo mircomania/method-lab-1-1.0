@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import { BurgerIcon } from '../utils/BurgerIcon';
+import { BurgerIcon } from '../../assets/icons/BurgerIcon';
 
-import logo from '../../assets/images/logo-black.png';
+import logo from '../../assets/images/global/logo-black.webp';
 
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -104,19 +104,37 @@ export const BurgerMenu = () => {
                                 {(() => {
                                     if (link.id === 'inicio') {
                                         return (
-                                            <a href="/" onClick={handleInicioClick} title={link.title}>
+                                            <a
+                                                href="/"
+                                                onClick={handleInicioClick}
+                                                title={link.title}
+                                                {...(link.dataLink && { 'data-link': link.dataLink })}
+                                                {...(link.dataCta && { 'data-cta': link.dataCta })}
+                                            >
                                                 {link.label}
                                             </a>
                                         );
                                     } else if (link.to.startsWith('#')) {
                                         return (
-                                            <a href={link.to} onClick={(e) => handleLinkClick(e, link)} title={link.title}>
+                                            <a
+                                                href={link.to}
+                                                onClick={(e) => handleLinkClick(e, link)}
+                                                title={link.title}
+                                                {...(link.dataLink && { 'data-link': link.dataLink })}
+                                                {...(link.dataCta && { 'data-cta': link.dataCta })}
+                                            >
                                                 {link.label}
                                             </a>
                                         );
                                     } else {
                                         return (
-                                            <NavLink to={link.to} onClick={toggleMenu} title={link.title} data-link={link.dataLink}>
+                                            <NavLink
+                                                to={link.to}
+                                                onClick={toggleMenu}
+                                                title={link.title}
+                                                {...(link.dataLink && { 'data-link': link.dataLink })}
+                                                {...(link.dataCta && { 'data-cta': link.dataCta })}
+                                            >
                                                 {link.label}
                                             </NavLink>
                                         );

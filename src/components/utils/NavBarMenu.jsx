@@ -1,5 +1,13 @@
 export const navLinks = [
-    { id: 'inicio', to: '/', label: 'INICIO', label2: 'Inicio', title: 'Ir al inicio', dataLink: 'navbar-inicio-link' },
+    {
+        id: 'inicio',
+        to: '/',
+        label: 'INICIO',
+        label2: 'Inicio',
+        title: 'Ir al inicio',
+        dataLink: 'navbar-inicio-link',
+        dataLink2: 'footer-inicio-link',
+    },
     {
         id: 'servicios',
         to: '#servicios',
@@ -7,6 +15,7 @@ export const navLinks = [
         label2: 'Servicios',
         title: 'Conoce los servicios de Method Lab',
         dataLink: 'navbar-servicios-link',
+        dataLink2: 'footer-servicios-link',
     },
     {
         id: 'metodologia',
@@ -23,6 +32,7 @@ export const navLinks = [
         ),
         title: 'Qué metodología seguimos en Method Lab',
         dataLink: 'navbar-metodologia-link',
+        dataLink2: 'footer-metodologia-link',
     },
     {
         id: 'monday',
@@ -31,6 +41,7 @@ export const navLinks = [
         label2: 'Monday.com',
         title: 'Conoce la aplicación Monday',
         dataLink: 'navbar-monday-link',
+        dataLink2: 'footer-monday-link',
     },
     {
         id: 'nosotros',
@@ -39,6 +50,7 @@ export const navLinks = [
         label2: 'Sobre Nosotros',
         title: 'Por qué elegir Method Lab',
         dataLink: 'navbar-nosotros-link',
+        dataLink2: 'footer-nosotros-link',
     },
     {
         id: 'contacto',
@@ -46,6 +58,7 @@ export const navLinks = [
         label: 'DISEÑEMOS TU MÉTODO',
         label2: 'Contáctanos',
         title: 'Contacta con Method Lab',
-        dataLink: 'navbar-contacto-link',
+        dataCta: 'navbar-contacto-link',
+        dataCta2: 'footer-contacto-link',
     },
 ];

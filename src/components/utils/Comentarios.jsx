@@ -1,10 +1,10 @@
-import img1 from '../../assets/images/img-section-lp-7-1.png';
-import img2 from '../../assets/images/img-section-lp-7-2.png';
-import img3 from '../../assets/images/img-section-lp-7-3.png';
-import img4 from '../../assets/images/img-section-lp-7-4.png';
-import img5 from '../../assets/images/img-section-lp-7-5.png';
-import img6 from '../../assets/images/img-section-lp-7-6.png';
-import img7 from '../../assets/images/img-section-lp-7-7.png';
+import img1 from '../../assets/images/home/section7/img-section-lp-7-1.webp';
+import img2 from '../../assets/images/home/section7/img-section-lp-7-2.webp';
+import img3 from '../../assets/images/home/section7/img-section-lp-7-3.webp';
+import img4 from '../../assets/images/home/section7/img-section-lp-7-4.webp';
+import img5 from '../../assets/images/home/section7/img-section-lp-7-5.webp';
+import img6 from '../../assets/images/home/section7/img-section-lp-7-6.webp';
+import img7 from '../../assets/images/home/section7/img-section-lp-7-7.webp';
 
 export const Comentarios = [
     {

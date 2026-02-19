@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import logo from '../../assets/images/logo-figuras-black.png';
+import logo from '../../assets/images/global/logo-figuras-black.webp';
 
 import { useMediaQuery } from '../../hooks/UseMediaQuery';
 import { BurgerMenu } from './BurgerMenu';
@@ -80,7 +80,8 @@ export const Navbar = () => {
                                         onClick={(e) => handleLinkClick(e, item)}
                                         className={activeLink === item.id ? 'active' : ''}
                                         title={item.title}
-                                        data-link={item.dataLink}
+                                        {...(item.dataLink && { 'data-link': item.dataLink })}
+                                        {...(item.dataCta && { 'data-cta': item.dataCta })}
                                     >
                                         {item.label}
                                     </a>
@@ -90,7 +91,8 @@ export const Navbar = () => {
                                         title={item.title}
                                         className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
                                         onClick={() => setActiveLink(item.id)}
-                                        data-link={item.dataLink}
+                                        {...(item.dataLink && { 'data-link': item.dataLink })}
+                                        {...(item.dataCta && { 'data-cta': item.dataCta })}
                                     >
                                         {item.label}
                                     </NavLink>

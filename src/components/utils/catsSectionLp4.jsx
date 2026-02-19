@@ -1,6 +1,6 @@
 import styles from '../../styles/modules/sectionLp4.module.css';
 
-import logoMonday from '../../assets/images/logo-monday-negro.png';
+import logo from '../../assets/images/global/logo-monday-negro.webp';
 
 export const catsSectionLp4 = [
     {
@@ -20,8 +20,8 @@ export const catsSectionLp4 = [
         titulo: 'Implementación tecnológica.',
         texto: (
             <>
-                Configuramos <img src={logoMonday} alt="monday.com" className={styles.inlineLogo} loading="lazy" decoding="async" /> <br /> llave en
-                mano, adaptado a tu operación.
+                Configuramos <img src={logo} alt="monday.com" className={styles.inlineLogo} loading="lazy" decoding="async" /> <br /> llave en mano,
+                adaptado a tu operación.
             </>
         ),
         duration: 0.9,

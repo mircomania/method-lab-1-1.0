@@ -112,7 +112,6 @@
     .sectionContainer {
         padding-top: 60px;
         padding-bottom: 80px;
-        gap: 20px;
     }
 
     .sectionContainer header h2 {
@@ -129,10 +128,6 @@
         padding-top: 50px;
         width: 420px;
         height: 400px;
-    }
-
-    .comentarioPersona {
-        gap: 20px;
     }
 
     .comentarioPersona img {

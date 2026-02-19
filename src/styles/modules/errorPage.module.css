@@ -47,12 +47,12 @@
 
 @media (min-width: 1200px) {
     .sectionContainer {
-        min-height: calc(100vh - 177px);
+        min-height: calc(100vh - 198px);
     }
 }
 
 @media (min-width: 1700px) {
     .sectionContainer {
-        min-height: calc(100vh - 200px);
+        min-height: calc(100vh - 221px);
     }
 }

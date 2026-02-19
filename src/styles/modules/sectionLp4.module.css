@@ -136,16 +136,13 @@
     }
 
     .titulosContainer::before {
-        content: '';
-        position: absolute;
         top: 180px;
         left: 104px;
         width: 80%;
         height: 0;
-        border-top: 2px dashed var(--darkblue-color);
-        z-index: 1;
         transform: scaleX(0);
         transform-origin: left;
+        border-top: 2px dashed var(--darkblue-color);
         opacity: 0;
         transition:
             transform 3s ease-out,
@@ -164,7 +161,6 @@
 
     .listaContainer {
         flex-direction: row;
-        gap: 25px;
     }
 
     .listaItem {
@@ -180,10 +176,6 @@
         font-size: 14px;
     }
 
-    .listaItem p {
-        font-size: 14px;
-    }
-
     .plusContainer {
         width: 60px;
         height: 60px;
@@ -195,13 +187,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 0;
         bottom: 125px;
         left: 50%;
         transform: translateX(-50%);
         width: 992px;
-        z-index: 3;
     }
 
     .iconosContainer img {
@@ -213,11 +202,7 @@
         right: 30px;
     }
 
-    .icono2 {
-        position: relative;
-        right: 20px;
-    }
-
+    .icono2,
     .icono3 {
         position: relative;
         right: 20px;
@@ -256,10 +241,6 @@
         transition: transform 0.4s ease;
     }
 
-    .sectionContenido {
-        --active-group: 0;
-    }
-
     .plusContainer {
         transition: transform 0.4s ease;
     }
@@ -288,46 +269,17 @@
 }
 
 @media (min-width: 1400px) {
-    .sectionContainer {
-        padding-top: 50px;
-        padding-bottom: 80px;
-    }
-
-    .titulosContainer {
-        align-items: center;
-        justify-content: center;
-        margin-right: 0px;
-    }
-
     .titulosContainer::before {
-        content: '';
-        position: absolute;
         top: 185px;
         left: 126px;
         width: 85%;
-        height: 0;
-        border-top: 2px dashed var(--darkblue-color);
-        z-index: 1;
-        transform: scaleX(0);
-        transform-origin: left;
-        opacity: 0;
-        transition:
-            transform 3s ease-out,
-            opacity 2s ease-out;
-    }
-
-    [data-visible='true'] .titulosContainer::before {
-        transform: scaleX(1);
-        opacity: 1;
     }
 
     .sectionTitulo h2 {
-        font-size: 38px;
         margin-bottom: 250px;
     }
 
     .listaContainer {
-        flex-direction: row;
         gap: 50px;
     }
 
@@ -335,74 +287,30 @@
         width: 151px;
     }
 
-    .listaItem span {
-        font-size: 38px;
-    }
-
-    .listaItem h3 {
-        line-height: 1.1;
-        font-size: 16px;
-    }
-
+    .listaItem h3,
     .listaItem p {
         font-size: 16px;
     }
 
     .plusContainer {
-        width: 60px;
-        height: 60px;
         bottom: 215px;
         left: 800px;
     }
 
     .iconosContainer {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
         bottom: 175px;
-        left: 50%;
-        transform: translateX(-50%);
         width: 1200px;
-        z-index: 3;
     }
 
     .iconosContainer img {
         width: 180px;
     }
-
-    .icono1 {
-        position: relative;
-        right: 30px;
-    }
-
-    .icono2 {
-        position: relative;
-        right: 20px;
-    }
-
-    .icono3 {
-        position: relative;
-        right: 20px;
-    }
-
-    .icono5 {
-        position: relative;
-        left: 30px;
-    }
 }
 
 @media (min-width: 1700px) {
-    .sectionContainer {
-        padding-top: 50px;
-        padding-bottom: 80px;
-    }
-
     .titulosContainer::before {
         top: 270px;
         left: 155px;
-        width: 85%;
     }
 
     .sectionTitulo h2 {
@@ -422,10 +330,7 @@
         font-size: 50px;
     }
 
-    .listaItem h3 {
-        font-size: 20px;
-    }
-
+    .listaItem h3,
     .listaItem p {
         font-size: 20px;
     }
@@ -455,10 +360,6 @@
 
     .icono2 {
         right: 50px;
-    }
-
-    .icono3 {
-        right: 20px;
     }
 
     .icono4 {

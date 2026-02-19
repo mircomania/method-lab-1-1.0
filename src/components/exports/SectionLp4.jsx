@@ -2,11 +2,11 @@ import { useRef } from 'react';
 
 import styles from '../../styles/modules/sectionLp4.module.css';
 
-import icono1 from '../../assets/images/figura-1.1.png';
-import icono2 from '../../assets/images/figura-2.1.png';
-import icono3 from '../../assets/images/figura-3.1.png';
-import icono4 from '../../assets/images/figura-4.png';
-import icono5 from '../../assets/images/figura-5.1.png';
+import icono1 from '../../assets/images/home/section4/figura-1.1.webp';
+import icono2 from '../../assets/images/home/section4/figura-2.1.webp';
+import icono3 from '../../assets/images/home/section4/figura-3.1.webp';
+import icono4 from '../../assets/images/home/section1/figura-4.webp';
+import icono5 from '../../assets/images/home/section4/figura-5.1.webp';
 
 import { useMediaQuery } from '../../hooks/UseMediaQuery';
 
@@ -53,19 +53,19 @@ export const SectionLp4 = () => {
 
                 <div className={styles.iconosContainer}>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono1} alt="" className={styles.icono1} data-group="1" />
+                        <img src={icono1} alt="Medio arco Amarillo" className={styles.icono1} data-group="1" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono2} alt="" className={styles.icono2} data-group="2" />
+                        <img src={icono2} alt="Circulo naranjo" className={styles.icono2} data-group="2" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono3} alt="" className={styles.icono3} data-group="3" />
+                        <img src={icono3} alt="Triangulo verde" className={styles.icono3} data-group="3" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono4} alt="" className={styles.icono4} data-group="4" />
+                        <img src={icono4} alt="Hexagono azul" className={styles.icono4} data-group="4" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono5} alt="" className={styles.icono5} data-group="5" />
+                        <img src={icono5} alt="Medio circulo morado" className={styles.icono5} data-group="5" />
                     </ScrollReveal>
                 </div>
             </div>

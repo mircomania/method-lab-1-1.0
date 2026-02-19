@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import logo from '../../assets/images/logo-figuras-black.png';
+import logo from '../../assets/images/global/logo-figuras-black.webp';
 
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -111,7 +111,7 @@ export const Footer = () => {
                     {/* LOGO  */}
                     <div className="logo-footer">
                         <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
-                            <img src={logo} alt="Logotipo de MethodLab en el pie de página" />
+                            <img src={logo} alt="Logotipo de Method Lab en el pie de página" />
                         </a>
                     </div>
 
@@ -126,7 +126,8 @@ export const Footer = () => {
                                             onClick={(e) => handleLinkClick(e, item)}
                                             className={activeLink === item.id ? 'active' : ''}
                                             title={item.title}
-                                            data-link={item.dataLink}
+                                            {...(item.dataLink2 && { 'data-link': item.dataLink2 })}
+                                            {...(item.dataCta2 && { 'data-cta': item.dataCta2 })}
                                         >
                                             {item.label2}
                                         </a>
@@ -136,7 +137,8 @@ export const Footer = () => {
                                             title={item.title}
                                             className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
                                             onClick={() => setActiveLink(item.id)}
-                                            data-link={item.dataLink}
+                                            {...(item.dataLink2 && { 'data-link': item.dataLink2 })}
+                                            {...(item.dataCta2 && { 'data-cta': item.dataCta2 })}
                                         >
                                             {item.label2}
                                         </NavLink>

@@ -1,6 +1,6 @@
 import styles from '../../styles/modules/sectionLp6.module.css';
 
-import imgSection from '../../assets/images/img-section-6-1.png';
+import img from '../../assets/images/home/section6/img-section-6-1.webp';
 
 import { ScrollReveal } from '../utils/ScrollReveal';
 import { useMediaQuery } from '../../hooks/UseMediaQuery';
@@ -37,7 +37,7 @@ export const SectionLp6 = () => {
 
                 <ScrollReveal mode="clone" from={isMobile ? 'bottom' : 'left'} distance={30} duration={0.3} threshold={isMobile ? 0.1 : 0.4}>
                     <div className={styles.cont2}>
-                        <img src={imgSection} alt="" />
+                        <img src={img} alt="David Cano fundador de Method Lab" />
 
                         <div className={styles.citaContainer}>
                             <p className="light-text">

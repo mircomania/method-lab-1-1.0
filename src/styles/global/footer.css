@@ -75,34 +75,11 @@
     }
 
     .footer-contenido {
-        display: flex;
         flex-direction: row-reverse;
         align-items: start;
         justify-content: space-between;
         width: 637px;
         gap: 0px;
-    }
-
-    .redes-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .logo-links-footer {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        gap: 28px;
-    }
-
-    .logo-footer img {
-        width: 130px;
-    }
-
-    .links-footer ul li {
-        font-size: 16px;
     }
 
     .utils-footer {
@@ -127,14 +104,6 @@
 
     .logo-links-footer {
         gap: 60px;
-    }
-
-    .logo-footer img {
-        width: 130px;
-    }
-
-    .links-footer ul li {
-        font-size: 16px;
     }
 }
 

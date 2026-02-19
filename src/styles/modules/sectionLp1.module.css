@@ -139,10 +139,6 @@
         font-size: 68px;
     }
 
-    .sectionImagenes img {
-        max-width: 150px;
-    }
-
     .sectionImagenes img:nth-child(1) {
         top: 40px;
         right: 100px;
@@ -150,7 +146,6 @@
 
     .sectionImagenes img:nth-child(2) {
         top: 180px;
-        right: -30px;
     }
 
     .sectionImagenes img:nth-child(3) {
@@ -165,7 +160,6 @@
 
     .sectionImagenes img:nth-child(5) {
         top: 170px;
-        left: -40px;
     }
 }
 
@@ -188,7 +182,6 @@
     }
 
     .sectionImagenes img:nth-child(2) {
-        top: 180px;
         right: -50px;
     }
 
@@ -198,12 +191,10 @@
     }
 
     .sectionImagenes img:nth-child(4) {
-        bottom: 12px;
         left: 80px;
     }
 
     .sectionImagenes img:nth-child(5) {
-        top: 170px;
         left: -60px;
     }
 }
@@ -222,27 +213,10 @@
     }
 
     .sectionImagenes img:nth-child(1) {
-        top: 60px;
         right: 200px;
     }
 
-    .sectionImagenes img:nth-child(2) {
-        top: 180px;
-        right: -50px;
-    }
-
-    .sectionImagenes img:nth-child(3) {
-        bottom: 20px;
-        right: 50px;
-    }
-
-    .sectionImagenes img:nth-child(4) {
-        bottom: 12px;
-        left: 80px;
-    }
-
     .sectionImagenes img:nth-child(5) {
-        top: 170px;
         left: -70px;
     }
 }
@@ -257,27 +231,10 @@
     }
 
     .sectionImagenes img:nth-child(1) {
-        top: 60px;
         right: 300px;
     }
 
-    .sectionImagenes img:nth-child(2) {
-        top: 180px;
-        right: -50px;
-    }
-
-    .sectionImagenes img:nth-child(3) {
-        bottom: 20px;
-        right: 50px;
-    }
-
-    .sectionImagenes img:nth-child(4) {
-        bottom: 12px;
-        left: 80px;
-    }
-
     .sectionImagenes img:nth-child(5) {
-        top: 170px;
         left: -80px;
     }
 }

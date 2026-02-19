@@ -98,11 +98,6 @@
 }
 
 @media (min-width: 1400px) {
-    .sectionContainer {
-        padding-top: 80px;
-        padding-bottom: 130px;
-    }
-
     .sectionContenido {
         gap: 50px;
     }
@@ -125,8 +120,8 @@
     }
 
     .citaContainer {
-        width: 380px;
         height: 100px;
+        width: 380px;
     }
 
     .citaContainer p {
@@ -162,8 +157,8 @@
     }
 
     .citaContainer {
-        width: 500px;
         height: 110px;
+        width: 500px;
     }
 
     .citaContainer p {

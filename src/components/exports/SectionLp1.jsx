@@ -1,10 +1,10 @@
 import styles from '../../styles/modules/sectionLp1.module.css';
 
-import img1 from '../../assets/images/figura-1.png';
-import img2 from '../../assets/images/figura-2.png';
-import img3 from '../../assets/images/figura-3.png';
-import img4 from '../../assets/images/figura-4.png';
-import img5 from '../../assets/images/figura-5.png';
+import img1 from '../../assets/images/home/section1/figura-1.webp';
+import img2 from '../../assets/images/home/section1/figura-2.webp';
+import img3 from '../../assets/images/home/section1/figura-3.webp';
+import img4 from '../../assets/images/home/section1/figura-4.webp';
+import img5 from '../../assets/images/home/section1/figura-5.webp';
 
 import { BotonNav } from '../utils/BotonNav';
 import { ScrollReveal } from '../utils/ScrollReveal';

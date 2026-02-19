@@ -62,7 +62,7 @@ export const SectionFp1 = () => {
             )}
 
             {/* BOTON */}
-            <BotonNav to="/" dataCta="faq-btn">
+            <BotonNav to="/" dataLink="faq-home-btn">
                 VOLVER AL INICIO.
             </BotonNav>
         </section>

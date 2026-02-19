@@ -167,28 +167,7 @@
         border-top: 50px solid var(--blue-color);
     }
 
-    .sectionText {
-        width: 277px;
-    }
-
-    .sectionTitulo {
-        margin-bottom: 30px;
-    }
-
-    .sectionTitulo h2 {
-        font-size: 46px;
-    }
-
-    .sectionText p {
-        font-size: 16px;
-    }
-
-    .sectionText p:first-of-type {
-        margin-bottom: 20px;
-    }
-
     .sectionForm {
-        width: 340px;
         margin: 0px 0;
     }
 }
@@ -201,7 +180,6 @@
 
 @media (min-width: 1200px) {
     .sectionContenido {
-        padding-top: 100px;
         padding-bottom: 30px;
     }
 
@@ -231,7 +209,6 @@
     }
 
     .sectionImagenes img:nth-child(2) {
-        top: 200px;
         left: -85px;
     }
 
@@ -266,20 +243,12 @@
         width: 346px;
     }
 
-    .sectionTitulo {
-        margin-bottom: 35px;
-    }
-
     .sectionTitulo h2 {
         font-size: 58px;
     }
 
     .sectionText p {
         font-size: 20px;
-    }
-
-    .sectionText p:first-of-type {
-        margin-bottom: 25px;
     }
 
     .sectionForm {
@@ -292,11 +261,9 @@
 
     .sectionImagenes img:nth-child(1) {
         top: -55px;
-        right: 10%;
     }
 
     .sectionImagenes img:nth-child(2) {
-        top: 200px;
         left: -100px;
     }
 
@@ -307,6 +274,5 @@
 
     .sectionImagenes img:nth-child(4) {
         bottom: -80px;
-        right: 10%;
     }
 }
