@@ -1,5 +1,5 @@
 import styles from '../../styles/modules/sectionLp3.module.css';
-import logo from '../../assets/images/home/section3/logo-monday-blanco.webp';
+import logo from '../../assets/images/home/section3/logo-monday-blanco.svg';
 
 import { ScrollReveal } from '../utils/ScrollReveal';
 

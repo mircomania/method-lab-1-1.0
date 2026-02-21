@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     background: var(--darkblue-color);
     padding: 50px 0;
 }
@@ -152,7 +153,6 @@
 
 .cont10 img {
     width: 85px;
-    margin-bottom: 10px;
 }
 
 .cont11 {
@@ -254,6 +254,7 @@
     }
 
     .cont10 img {
+        margin-top: 5px;
         width: 104px;
         transition: transform 0.4s ease;
     }
