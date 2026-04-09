@@ -11,6 +11,7 @@ import { SectionLp5 } from '../exports/SectionLp5';
 import { SectionLp6 } from '../exports/SectionLp6';
 import { SectionLp7 } from '../exports/SectionLp7';
 import { SectionLp8 } from '../exports/SectionLp8';
+import { VideoSection } from '../exports/VideoSection';
 
 const LandingPage = () => {
     const location = useLocation();
@@ -42,6 +43,10 @@ const LandingPage = () => {
 
             <section id="servicios" className="stack stack--servicios">
                 <SectionLp3 />
+            </section>
+
+            <section className="stack">
+                <VideoSection />
             </section>
 
             <section id="metodologia" className="stack">

@@ -34,7 +34,7 @@ export const SectionLp7 = () => {
                         {comentarios.map((comentario, i) => (
                             <div key={i} className={styles.comentario}>
                                 <div className={styles.comentarioPersona}>
-                                    <img src={comentario.img} alt={comentario.nombre} />
+                                    <img src={comentario.img} alt={comentario.nombre} loading="lazy" decoding="async" />
 
                                     <div className={styles.comentarioDatos}>
                                         <h3 className="bold-text">{comentario.nombre}</h3>

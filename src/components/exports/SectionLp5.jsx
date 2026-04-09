@@ -17,25 +17,25 @@ export const SectionLp5 = () => {
             <div className={styles.sectionContenido}>
                 <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.3} delay={0.6}>
                     <div className={`${styles.dobleWrap} ${styles.cont1}`}>
-                        <img src={logoMonday} alt="Monday.com" />
+                        <img src={logoMonday} alt="Monday.com" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
                 <ScrollReveal mode="wrap" from="right" distance={0} duration={0.3} threshold={0.3} delay={0.4}>
                     <div className={`${styles.singleWrap} ${styles.cont2}`}>
-                        <img src={img8} alt="Tablas de datos ordenándose" />
+                        <img src={img8} alt="Tablas de datos ordenándose" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
                 <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.3} delay={0.2}>
                     <div className={`${styles.singleWrap} ${styles.cont3}`}>
-                        <img src={img2} alt="Dos manos chocando los cinco con las palmas" />
+                        <img src={img2} alt="Dos manos chocando los cinco con las palmas" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
                 <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.3} delay={0}>
                     <div className={`${styles.singleWrap} ${styles.cont4}`}>
-                        <img src={img3} alt="Una pestaña de navegador muy optimizada" />
+                        <img src={img3} alt="Una pestaña de navegador muy optimizada" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
@@ -57,7 +57,7 @@ export const SectionLp5 = () => {
 
                 <ScrollReveal mode="clone" from="left" distance={0} duration={0.3} threshold={0.2} delay={0.4}>
                     <div className={`${styles.dobleWrap} ${styles.cont7}`}>
-                        <img src={img4} alt="Panel de control de datos de tu empresa" />
+                        <img src={img4} alt="Panel de control de datos de tu empresa" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
@@ -79,7 +79,7 @@ export const SectionLp5 = () => {
 
                 <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.1} delay={0.6}>
                     <div className={`${styles.singleWrap} ${styles.cont10}`}>
-                        <img src={img5} alt="Lupa buscando los procesos mejorar tu empresa" />
+                        <img src={img5} alt="Lupa buscando los procesos mejorar tu empresa" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
@@ -93,13 +93,13 @@ export const SectionLp5 = () => {
 
                 <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.1} delay={0.2}>
                     <div className={`${styles.singleWrap} ${styles.cont12}`}>
-                        <img src={img6} alt="Todo en desarrollo de tu empresa en una sola mano" />
+                        <img src={img6} alt="Todo en desarrollo de tu empresa en una sola mano" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
 
                 <ScrollReveal mode="clone" from="right" distance={0} duration={0.3} threshold={0.1} delay={0}>
                     <div className={`${styles.singleWrap} ${styles.cont13}`}>
-                        <img src={img7} alt="Certificado de Monday.com" />
+                        <img src={img7} alt="Certificado de Monday.com" loading="lazy" decoding="async" />
                     </div>
                 </ScrollReveal>
             </div>

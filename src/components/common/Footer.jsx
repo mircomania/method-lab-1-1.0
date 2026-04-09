@@ -111,7 +111,7 @@ export const Footer = () => {
                     {/* LOGO  */}
                     <div className="logo-footer">
                         <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
-                            <img src={logo} alt="Logotipo de Method Lab en el pie de página" />
+                            <img src={logo} alt="Logotipo de Method Lab en el pie de página" loading="lazy" decoding="async" />
                         </a>
                     </div>
 

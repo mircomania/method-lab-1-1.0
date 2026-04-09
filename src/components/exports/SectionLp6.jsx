@@ -37,7 +37,7 @@ export const SectionLp6 = () => {
 
                 <ScrollReveal mode="clone" from={isMobile ? 'bottom' : 'left'} distance={30} duration={0.3} threshold={isMobile ? 0.1 : 0.4}>
                     <div className={styles.cont2}>
-                        <img src={img} alt="David Cano fundador de Method Lab" />
+                        <img src={img} alt="David Cano fundador de Method Lab" loading="lazy" decoding="async" />
 
                         <div className={styles.citaContainer}>
                             <p className="light-text">

@@ -38,10 +38,10 @@ export const SectionLp8 = () => {
                 </div>
 
                 <div className={styles.sectionImagenes}>
-                    <img src={img1} alt="Medio arco Amarillo" />
-                    <img src={img2} alt="Circulo naranjo" />
-                    <img src={img3} alt="Triangulo verde" />
-                    <img src={img5} alt="Medio circulo morado" />
+                    <img src={img1} alt="Medio arco Amarillo" loading="lazy" decoding="async" />
+                    <img src={img2} alt="Circulo naranjo" loading="lazy" decoding="async" />
+                    <img src={img3} alt="Triangulo verde" loading="lazy" decoding="async" />
+                    <img src={img5} alt="Medio circulo morado" loading="lazy" decoding="async" />
                 </div>
             </div>
         </section>

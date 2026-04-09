@@ -53,19 +53,19 @@ export const SectionLp4 = () => {
 
                 <div className={styles.iconosContainer}>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono1} alt="Medio arco Amarillo" className={styles.icono1} data-group="1" />
+                        <img src={icono1} alt="Medio arco Amarillo" className={styles.icono1} data-group="1" loading="lazy" decoding="async" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono2} alt="Circulo naranjo" className={styles.icono2} data-group="2" />
+                        <img src={icono2} alt="Circulo naranjo" className={styles.icono2} data-group="2" loading="lazy" decoding="async" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono3} alt="Triangulo verde" className={styles.icono3} data-group="3" />
+                        <img src={icono3} alt="Triangulo verde" className={styles.icono3} data-group="3" loading="lazy" decoding="async" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono4} alt="Hexagono azul" className={styles.icono4} data-group="4" />
+                        <img src={icono4} alt="Hexagono azul" className={styles.icono4} data-group="4" loading="lazy" decoding="async" />
                     </ScrollReveal>
                     <ScrollReveal mode="wrap" from={isMobile ? 'left' : 'right'} distance={50} duration={0.3} threshold={0.2}>
-                        <img src={icono5} alt="Medio circulo morado" className={styles.icono5} data-group="5" />
+                        <img src={icono5} alt="Medio circulo morado" className={styles.icono5} data-group="5" loading="lazy" decoding="async" />
                     </ScrollReveal>
                 </div>
             </div>
