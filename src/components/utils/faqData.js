@@ -8,7 +8,7 @@ Generalmente incluyen:\n
 - Mapeo de procesos\n
 - Implementación personalizada en [monday.com](https://monday.com)\n
 - Capacitación y acompañamiento\n
-Los proyectos suelen estar en un rango aproximado de $100,000 a $250,000 MXN, más una póliza mensual opcional de acompañamiento. Siempre entregamos propuesta formal con alcance, etapas, entrañables y costos claros.
+Los proyectos suelen estar en un rango aproximado de $100,000 a $250,000 MXN, más una póliza mensual opcional de acompañamiento. Siempre entregamos propuesta formal con alcance, etapas, entregables y costos claros.
 `,
     },
 
@@ -55,11 +55,11 @@ La tecnología es el medio, no el fin.
         answer: `Nos metemos a:\n
 - Entender cómo trabaja cada persona\n
 - Mapear procesos reales\n
-- Diseñar soluciones simplificadas hechas a la medida y fácil de cumplir\n
+- Diseñar soluciones simplificadas hechas a la medida y fáciles de cumplir\n
 - Configurar la herramienta por ustedes\n
 Entregamos sistemas listos para usarse de una manera muy sencilla y práctica.\n
 Nuestro enfoque es:\n
-claridad > orden > productividad > tranquilidad
+Claridad > Orden > Productividad > Tranquilidad
 `,
     },
 

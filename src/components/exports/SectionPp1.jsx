@@ -30,7 +30,7 @@ export const SectionPp1 = () => {
                     solicitudes de información, elaborar propuestas comerciales, brindar los servicios contratados, dar seguimiento a proyectos,
                     mantener comunicación profesional y cumplir obligaciones contractuales y fiscales. De manera adicional, podremos utilizar su
                     información para el envío de contenido informativo, invitaciones, materiales educativos o comunicaciones relacionadas con nuestros
-                    servicios, siempre permitiéndole manifestar su negativa para estas finalidades secundarias en cualquier momento.
+                    servicios, siempre permitiéndole manifestar su negativa para dichas finalidades secundarias en cualquier momento.
                 </p>
 
                 <p>

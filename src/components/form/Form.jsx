@@ -88,7 +88,7 @@ export const Form = () => {
             {/* EMAIL */}
             <div className={styles.inputContainer}>
                 <label htmlFor="email" className={`light-text ${errors.email ? styles.labelError : ''}`} aria-label="email del usuario">
-                    Correo electronico
+                    Correo electrónico
                 </label>
                 <input
                     type="email"
@@ -152,7 +152,7 @@ export const Form = () => {
 
                 {/* TOOL */}
                 <CustomSelect
-                    label="Usas alguna herramienta de gestión"
+                    label="¿Usas alguna herramienta de gestión?"
                     name="tool"
                     options={toolsOptions}
                     value={formData.tool}

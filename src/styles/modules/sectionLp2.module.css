@@ -37,7 +37,7 @@
         padding-bottom: 80px;
     }
     .sectionTitulo {
-        width: 489px;
+        width: 490px;
     }
 
     .sectionTitulo h2 {
@@ -47,7 +47,7 @@
 
 @media (min-width: 1400px) {
     .sectionTitulo {
-        width: 527px;
+        width: 534px;
     }
 
     .sectionTitulo h2 {
@@ -57,7 +57,7 @@
 
 @media (min-width: 1700px) {
     .sectionTitulo {
-        width: 658px;
+        width: 668px;
     }
 
     .sectionTitulo h2 {

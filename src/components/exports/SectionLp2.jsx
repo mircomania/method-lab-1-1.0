@@ -12,7 +12,7 @@ export const SectionLp2 = () => {
                         En{' '}
                         <strong>
                             Method Lab<span className="registered">®</span>
-                        </strong>
+                        </strong>{' '}
                         ayudamos a líderes y equipos a trabajar con claridad. Diagnosticamos tu operación, diseñamos procesos eficientes y los
                         implementamos en herramientas digitales fáciles de usar. Así, tu negocio gana orden, productividad y control real.
                     </h2>

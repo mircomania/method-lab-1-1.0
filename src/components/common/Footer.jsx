@@ -154,7 +154,7 @@ export const Footer = () => {
                 <p>All right reserved.</p>
 
                 <NavLink to="/politica-privacidad" title="Ver la política de privacidad" data-link="footer-politica-link">
-                    Politica de Privacidad
+                    Política de privacidad
                 </NavLink>
 
                 <NavLink to="/faq" title="Ver las preguntas preguntas frecuentes" data-link="footer-faq-link">
