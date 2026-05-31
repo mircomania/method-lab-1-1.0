@@ -83,7 +83,7 @@ export const Footer = () => {
                 {/* REDES */}
                 <div className="redes-footer light-text">
                     <a
-                        href="https://www.linkedin.com/"
+                        href="https://www.linkedin.com/in/david-cano-528965271/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="linkedin"
@@ -93,7 +93,7 @@ export const Footer = () => {
                     </a>
 
                     <a
-                        href="https://www.instagram.com/"
+                        href="http://www.instagram.com/methodlab.mx/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="instagram"
@@ -102,7 +102,13 @@ export const Footer = () => {
                         INSTAGRAM
                     </a>
 
-                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="tiktok" data-link="footer-tiktok-link">
+                    <a
+                        href="https://www.tiktok.com/@methodlabmx/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="tiktok"
+                        data-link="footer-tiktok-link"
+                    >
                         TIK TOK
                     </a>
                 </div>
